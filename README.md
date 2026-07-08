@@ -38,7 +38,24 @@ Planned components include:
 - [ ] Leaderboard and reproducibility guidelines
 
 ---
+
+## The Framework 
+
 ![Project Architecture](figures/mlscabenchnew.png)
+
+---
+
+## Datasets 
+
+Below an exhaustive list of the supported datasets. 
+
+
+## Models 
+
+Below an exhaustive list of the supported models. 
+
+## Metrics
+
 ---
 
 ## Contributing
