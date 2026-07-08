@@ -62,7 +62,7 @@ Below an exhaustive list of the supported models.
 
 MLSCA-Bench is an open research initiative developed by the [ESSEC group](https://www.unibw.de/essec) at the [University of the Bundeswehr Munich](https://www.unibw.de/home-en). We welcome feedback, collaborations, and contributions from the side-channel analysis and machine learning communities.
 
-If you would like to contribute, please open an issue, submit a pull request or contact us at `iris.jimenez@unibw.de`. 
+If you would like to contribute, please open an issue, submit a pull request or contact us at `iris.jimenez@unibw.de` or `michael.hutter@unibw.de`. 
 
 ---
 
