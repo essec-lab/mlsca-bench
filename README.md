@@ -38,7 +38,7 @@ Planned components include:
 - [ ] Leaderboard and reproducibility guidelines
 
 ---
-![Project Architecture](figures/mlscabenchnew.pdf)
+![Project Architecture](figures/mlscabenchnew.png)
 ---
 
 ## Contributing
