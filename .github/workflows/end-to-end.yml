@@ -1,0 +1,52 @@
+# Copyright (c) 2026 Universität der Bundeswehr München / FI CODE - ESSEC Lab.
+# Licensed under the Apache License, Version 2.0, see LICENSE for details.
+# SPDX-License-Identifier: Apache-2.0
+
+name: End to end
+
+# The five core features as a user runs them, on Linux, macOS and Windows:
+# real downloads (ASCAD, 4.4 GB), loading, every baseline (CPU; the heavy models
+# on a few hundred traces), GE / SR and plots, your own dataset and your own
+# model, and the README examples exactly as written (scripts/user_journey.py).
+# It downloads real data, so it runs on demand and once a week, not on every push.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * 1"          # Mondays 04:00 UTC
+
+permissions:
+  contents: read
+
+jobs:
+  user-journey:
+    name: User journey (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install PyTorch (CPU build)
+        if: runner.os != 'macOS'
+        run: python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - name: Install PyTorch (macOS)
+        if: runner.os == 'macOS'
+        run: python -m pip install torch
+      - name: Install MLSCA-Bench as a user would (not editable)
+        run: python -m pip install ".[hdf5,eval,plot]"
+      - name: Run the user journey
+        run: python scripts/user_journey.py --device cpu
+      - name: Keep the report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: user-journey-${{ matrix.os }}
+          path: user_journey_report.txt
+          if-no-files-found: warn

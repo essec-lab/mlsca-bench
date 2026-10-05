@@ -1,0 +1,19 @@
+.venv/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.DS_Store
+# stray local scratchpad (use the session scratchpad dir)
+scratchpad/
+
+# Office lock files
+~$*
+src/dataset_review.xlsx
+
+# Kept locally and on the private full-version branch, not published
+CHANGELOG.md
+documentation/coverage-gap-report.md
+scripts/coverage_report.py

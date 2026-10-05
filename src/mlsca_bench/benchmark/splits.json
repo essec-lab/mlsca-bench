@@ -1,0 +1,9 @@
+{
+  "about": "Canonical SCA-Bench split policy. `default` applies to every dataset; `datasets` holds per-dataset overrides (seed / val_ratio / ratios). make_splits(name) uses this unless an explicit SplitPolicy is passed.",
+  "default": {
+    "seed": 0,
+    "val_ratio": 0.1,
+    "ratios": [0.7, 0.15, 0.15]
+  },
+  "datasets": {}
+}

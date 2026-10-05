@@ -1,0 +1,4056 @@
+{
+  "ascon-cw-unprotected": {
+    "display_name": "Ascon ChipWhisperer unprotected",
+    "aliases": [
+      "ascon-unprotected",
+      "ascon-cw",
+      "ascon software unprotected"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://zenodo.org/records/10229484/files/ascon_cw_unprotected.h5?download=1",
+        "filename": "ascon_cw_unprotected.h5",
+        "known_hash": "md5:19af7233552fd17216127a03fbc1dda6",
+        "archive": null
+      }
+    ],
+    "homepage": "https://zenodo.org/records/10229484",
+    "paper": "https://eprint.iacr.org/2023/1598",
+    "license": "CC-BY-4.0",
+    "license_source": "https://zenodo.org/api/records/10229484",
+    "size_bytes": 423206528,
+    "disk_bytes": 423206528,
+    "notes": "100,000 software power traces collected from an unprotected Ascon implementation on a ChipWhisperer STM32F4 target. Two groups: random_keys (profiling) and fixed_keys (attack). NOTE: the file also ships a precomputed per-trace 'labels' (N,64) array; the benchmark ignores it and computes labels from the metadata (nonce+key). That shipped array could not be reproduced from the metadata under any standard Ascon convention - it uses an undocumented internal bit/word packing - so do not rely on it; it does not affect the traces or metadata, which are correct.",
+    "adapter": "ascon-hdf5",
+    "fields": {"fixed": ["ciphertexts", "keys", "labels", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "Ascon-128",
+      "measurement": "power",
+      "device": "STM32F4",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "variable",
+      "n_samples": 772,
+      "year": 2023
+    }
+  },
+  "ascadf": {
+    "display_name": "ASCAD fixed-key",
+    "aliases": [
+      "ascad-fixed",
+      "ascad-f"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://www.data.gouv.fr/api/1/datasets/r/e7ab6f9e-79bf-431f-a5ed-faf0ebe9b08e",
+        "filename": "ASCAD_data.zip",
+        "known_hash": "sha256:a6884faf97133f9397aeb1af247dc71ab7616f3c181190f127ea4c474a0ad72c",
+        "archive": "zip"
+      }
+    ],
+    "homepage": "https://github.com/ANSSI-FR/ASCAD/tree/master/ATMEGA_AES_v1/ATM_AES_v1_fixed_key",
+    "paper": "https://eprint.iacr.org/2018/053",
+    "license": "Licence Ouverte 1.0 (code repository: BSD)",
+    "license_source": "https://www.data.gouv.fr/api/1/datasets/5aaa829dc751df2fbd43eacb/",
+    "notes": "Fixed-key ASCAD package containing synchronized raw traces, processed ASCAD datasets, desynchronized variants, and trained reference models.",
+    "size_bytes": 4435199469,
+    "disk_bytes": 12200000000,
+    "fields": {"profiling": ["ciphertexts", "keys", "masks", "plaintexts", "traces"], "attack": ["ciphertexts", "keys", "masks", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "ATMEGA8515",
+      "platform": "avr",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "fixed",
+      "n_samples": 700,
+      "year": 2018
+    },
+    "adapter": "ascad"
+  },
+  "aes-hd-git": {
+    "display_name": "AES HD GitHub CSV",
+    "aliases": [
+      "aes-hd-csv"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/AESHD/AES_HD_Dataset/8baa486eeb38a043ed4dafadf55bcd03e8846def/labels.csv",
+        "filename": "labels.csv",
+        "known_hash": "sha256:9e4ce4c7a0fe9eb319341e8f58d667870c6df9757426add5f0a92a66b0e50962",
+        "archive": null
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AESHD/AES_HD_Dataset/8baa486eeb38a043ed4dafadf55bcd03e8846def/traces_1.csv",
+        "filename": "traces_1.csv",
+        "known_hash": "sha256:0bec17f8ffe4eb4b3d060eb70136e46e6317583905ee9df33fec7dba848f543a",
+        "archive": null
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AESHD/AES_HD_Dataset/8baa486eeb38a043ed4dafadf55bcd03e8846def/traces_2.csv",
+        "filename": "traces_2.csv",
+        "known_hash": "sha256:d5704b21e77312a33fa196426944d523dc2e4cc6db46a9e0f5ff489e542d305e",
+        "archive": null
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AESHD/AES_HD_Dataset/8baa486eeb38a043ed4dafadf55bcd03e8846def/traces_3.csv",
+        "filename": "traces_3.csv",
+        "known_hash": "sha256:181f700a9c7393018c2f5655944aa2b1ca479bddc58a11d82b09386de56d85cb",
+        "archive": null
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AESHD/AES_HD_Dataset/8baa486eeb38a043ed4dafadf55bcd03e8846def/traces_4.csv",
+        "filename": "traces_4.csv",
+        "known_hash": "sha256:10fc903d16150b738d4d15b2e7281a8ac0a10d56ad0ea056bf43155fe82f55ec",
+        "archive": null
+      },
+      {
+        "url": "https://raw.githubusercontent.com/AESHD/AES_HD_Dataset/8baa486eeb38a043ed4dafadf55bcd03e8846def/traces_5.csv",
+        "filename": "traces_5.csv",
+        "known_hash": "sha256:2cd6c89b13963bc17e21a30405edbefafb06ccf835883435158af9d04462bd1a",
+        "archive": null
+      }
+    ],
+    "homepage": "https://github.com/AESHD/AES_HD_Dataset",
+    "paper": "https://tches.iacr.org/index.php/TCHES/article/view/7339",
+    "license": "not stated",
+    "license_source": "https://api.github.com/repos/AESHD/AES_HD_Dataset/license",
+    "notes": "GitHub CSV variant with 100,000 unprocessed traces split across five trace files plus labels, pinned to upstream commit 8baa486eeb38a043ed4dafadf55bcd03e8846def.",
+    "size_bytes": 496407885,
+    "disk_bytes": 496407885,
+    "adapter": "aes-hd-csv",
+    "fields": ["labels", "traces"],
+    "metadata": {
+      "format": "csv",
+      "algorithm": "AES-128",
+      "measurement": "electromagnetic",
+      "device": "SASEBO GII (Xilinx Virtex-5)",
+      "platform": "fpga",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "fixed",
+      "n_samples": 1250,
+      "year": 2018
+    }
+  },
+  "aes-hd-zaid": {
+    "display_name": "AES HD Zaid preprocessed",
+    "aliases": [
+      "aes-hd-preprocessed",
+      "zaid-aes-hd"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://raw.githubusercontent.com/gabzai/Methodology-for-efficient-CNN-architectures-in-SCA/69818233fcc723c6e5495088847def9313af6bbf/AES_HD/AES_HD_dataset.zip",
+        "filename": "AES_HD_dataset.zip",
+        "known_hash": "sha256:00a3d02f01bae8c4fcefda33e3d1adb57bed0509ded3cdcf586e213b3d87e41b",
+        "archive": "zip"
+      }
+    ],
+    "homepage": "https://github.com/gabzai/Methodology-for-efficient-CNN-architectures-in-SCA/tree/master/AES_HD",
+    "paper": "https://tches.iacr.org/index.php/TCHES/article/view/7339",
+    "license": "not stated",
+    "license_source": "https://api.github.com/repos/gabzai/Methodology-for-efficient-CNN-architectures-in-SCA/license",
+    "notes": "Preprocessed AES HD NumPy archive used with the efficient-CNN methodology, pinned to the commit that introduced the current artifact.",
+    "size_bytes": 86203943,
+    "disk_bytes": 846404711,
+    "adapter": "aes-hd-zaid",
+    "fields": {"profiling": ["ciphertexts", "labels", "traces"]},
+    "metadata": {
+      "format": "numpy",
+      "algorithm": "AES-128",
+      "measurement": "electromagnetic",
+      "device": "SASEBO GII (Xilinx Virtex-5)",
+      "platform": "fpga",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "fixed",
+      "n_samples": 1250,
+      "year": 2018
+    }
+  },
+  "eshard-aes-masked-non-shuffled": {
+    "display_name": "eShard Nucleo masked AES (non-shuffled)",
+    "aliases": [
+      "eshard-non-shuffled",
+      "eshard-aes-non-shuffled",
+      "nucleo-aes-masked-non-shuffled",
+      "nucleo-sw-aes-masked"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://gitlab.com/api/v4/projects/36075674/repository/files/Nucleo_AES_masked_non_shuffled.ets/raw?ref=f2c615e14c6f157d79a5f4b01fdf0537e910705d&lfs=true",
+        "filename": "Nucleo_AES_masked_non_shuffled.ets",
+        "known_hash": "sha256:9a9019fec461cb007407b8c5317bacc91d17e4ede60f7de1e722e14da65f3762",
+        "archive": null
+      }
+    ],
+    "homepage": "https://gitlab.com/eshard/nucleo_sw_aes_masked_shuffled",
+    "paper": "https://doi.org/10.1007/s13389-022-00307-9",
+    "license": "not stated",
+    "license_source": "https://gitlab.com/api/v4/projects/36075674?license=true",
+    "notes": "Electromagnetic traces from a Boolean-masked software AES implementation on an STM32F4 Cortex-M4, acquired without SubBytes operation shuffling. The 135,112,903-byte ETS artifact is pinned to upstream commit f2c615e14c6f157d79a5f4b01fdf0537e910705d. No license is stated; the authors' README presents the data as a research resource and invites researchers to contact eShard with ideas and results.",
+    "size_bytes": 135112903,
+    "disk_bytes": 135112903,
+    "adapter": "hdf5",
+    "adapter_config": {
+      "splits": {
+        "all": "/"
+      },
+      "default_split": "all",
+      "traces_dataset": "traces",
+      "field_aliases": {
+        "plaintexts": [
+          "metadata/plaintext"
+        ],
+        "ciphertexts": [
+          "metadata/ciphertext"
+        ],
+        "keys": [
+          "metadata/key"
+        ],
+        "masks": [
+          "metadata/mask"
+        ]
+      },
+      "preferred_filename": "Nucleo_AES_masked_non_shuffled.ets",
+      "algorithm": "AES-128"
+    },
+    "fields": ["ciphertexts", "keys", "masks", "plaintexts", "traces"],
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "electromagnetic",
+      "device": "STM32F446 (Nucleo board)",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "fixed",
+      "n_samples": 1400,
+      "year": 2023
+    }
+  },
+  "eshard-aes-masked-shuffled": {
+    "display_name": "eShard Nucleo masked AES (shuffled)",
+    "aliases": [
+      "eshard-shuffled",
+      "eshard-aes-shuffled",
+      "nucleo-aes-masked-shuffled",
+      "nucleo-sw-aes-masked-shuffled"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://gitlab.com/api/v4/projects/36075674/repository/files/Nucleo_AES_masked_shuffled.ets/raw?ref=f2c615e14c6f157d79a5f4b01fdf0537e910705d&lfs=true",
+        "filename": "Nucleo_AES_masked_shuffled.ets",
+        "known_hash": "sha256:b4c3b6797c9bc8f98e91cc653ad461fd88eba0442bbdb0ee1f6d360dea20261f",
+        "archive": null
+      }
+    ],
+    "homepage": "https://gitlab.com/eshard/nucleo_sw_aes_masked_shuffled",
+    "paper": "https://doi.org/10.1007/s13389-022-00307-9",
+    "license": "not stated",
+    "license_source": "https://gitlab.com/api/v4/projects/36075674?license=true",
+    "notes": "Electromagnetic traces from a Boolean-masked software AES implementation on an STM32F4 Cortex-M4, with shuffled SubBytes operations. The 136,043,104-byte ETS artifact is pinned to upstream commit f2c615e14c6f157d79a5f4b01fdf0537e910705d. WARNING: this file is not consistent. Its 100,000 traces, keys, masks and ciphertexts are identical to those of eshard-aes-masked-non-shuffled; only the plaintexts (and an added permutation column) differ, and AES(plaintext, key) matches none of the ciphertexts (checked September 2026). The ciphertext problem is reported upstream as open issue #2 (https://gitlab.com/eshard/nucleo_sw_aes_masked_shuffled/-/issues/2, October 2023). Do not use it as a separate shuffled acquisition until the authors correct it. No license is stated; the authors' README presents the data as a research resource and invites researchers to contact eShard with ideas and results.",
+    "size_bytes": 136043104,
+    "disk_bytes": 136043104,
+    "adapter": "hdf5",
+    "adapter_config": {
+      "splits": {
+        "all": "/"
+      },
+      "default_split": "all",
+      "traces_dataset": "traces",
+      "field_aliases": {
+        "plaintexts": [
+          "metadata/plaintext"
+        ],
+        "ciphertexts": [
+          "metadata/ciphertext"
+        ],
+        "keys": [
+          "metadata/key"
+        ],
+        "masks": [
+          "metadata/mask"
+        ]
+      },
+      "preferred_filename": "Nucleo_AES_masked_shuffled.ets",
+      "algorithm": "AES-128"
+    },
+    "fields": ["ciphertexts", "keys", "masks", "plaintexts", "traces"],
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "electromagnetic",
+      "device": "STM32F446 (Nucleo board)",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "masking",
+        "shuffling"
+      ],
+      "key": "fixed",
+      "n_samples": 1400,
+      "year": 2023
+    }
+  },
+  "portability": {
+    "display_name": "Mind the Portability (NDSS 2020)",
+    "aliases": [
+      "mind-the-portability",
+      "portability-ndss",
+      "portability-dataset"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://zenodo.org/records/19060677/files/portability.zip?download=1",
+        "filename": "portability.zip",
+        "known_hash": "md5:d0f195f3e5c59f4961c47580e81b8de9",
+        "archive": "zip"
+      }
+    ],
+    "homepage": "https://zenodo.org/records/19060677",
+    "paper": "https://www.ndss-symposium.org/wp-content/uploads/2020/02/24390-paper.pdf",
+    "license": "CC-BY-4.0",
+    "license_source": "https://zenodo.org/api/records/19060677",
+    "size_bytes": 1976779395,
+    "disk_bytes": 9033628806,
+    "notes": "Power traces for the NDSS 2020 portability benchmark. AES-128 software implementation, 600 time samples per trace, multiple devices for realistic cross-device profiled side-channel analysis.",
+    "adapter": "matlab",
+    "adapter_config": {
+      "field_files": {
+        "traces": {
+          "filename": "traces.mat",
+          "var": "traces"
+        },
+        "plaintexts": {
+          "filename": "ptext.mat",
+          "var": "ptext",
+          "hex": true
+        },
+        "ciphertexts": {
+          "filename": "ctext.mat",
+          "var": "ctext",
+          "hex": true
+        }
+      },
+      "base_dir": "c1_k1",
+      "algorithm": "AES-128",
+      "metadata": {
+        "scope": "device c1_k1; fixed key K1 in KEY LIST.txt (not in .mat)"
+      }
+    },
+    "fields": ["ciphertexts", "plaintexts", "traces"],
+    "metadata": {
+      "format": "matlab",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "Atmega328p",
+      "platform": "avr",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "fixed",
+      "n_samples": 2500,
+      "year": 2020
+    }
+  },
+  "galactics-attack-data": {
+    "display_name": "GALACTICS Attack Data",
+    "aliases": [
+      "galactics",
+      "galactics-data",
+      "bliss",
+      "bliss-dataset"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://zenodo.org/records/5101343/files/galactics_attack_data.7z?download=1",
+        "filename": "galactics_attack_data.7z",
+        "known_hash": "md5:0f73cd41c9c97dfffffe150434543a7d",
+        "archive": "7z"
+      }
+    ],
+    "homepage": "https://zenodo.org/records/5101343",
+    "paper": "https://arxiv.org/abs/2109.09461",
+    "license": "CC-BY-4.0",
+    "license_source": "https://zenodo.org/api/records/5101343",
+    "size_bytes": 22603869118,
+    "disk_bytes": 115556617955,
+    "notes": "GALACTICS side-channel benchmark archive containing the BLISS-A and BLISS-B profiling datasets together with the corresponding attack traces and metadata. The archive is distributed as a single 7z file.",
+    "adapter": "pickle",
+    "adapter_config": {
+      "member": "Kx_const_cw_data.pickle",
+      "algorithm": "BLISS",
+      "metadata": {
+        "security": "PICKLE: unpickling executes arbitrary code; requires trust_pickle=True at load time",
+        "note": "traces in pandas-pickled DataFrames; targets: Kx_const/z_cflip/sc_cflip/yu (per device_a/b attack folders). Set member to another *.pickle to pick a different target/device."
+      }
+    },
+    "metadata": {
+      "format": "other",
+      "algorithm": "BLISS",
+      "measurement": "power",
+      "platform": "arm-cortex-m",
+      "device": "STM32F4",
+      "countermeasures": [
+        "constant-time"
+      ],
+      "key": "variable",
+      "year": 2022
+    }
+  },
+  "kyber-reference-ppm": {
+    "display_name": "Kyber reference pair-pointwise multiplication",
+    "aliases": [
+      "kyber",
+      "kyber-ppm",
+      "crystals-kyber",
+      "reference-ppm"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://zenodo.org/api/records/15352482/files/Reference-PPM.zip/content",
+        "filename": "Reference-PPM.zip",
+        "known_hash": "md5:083158acd950e5d467a35bc4375e54b3",
+        "archive": "zip"
+      },
+      {
+        "url": "https://zenodo.org/api/records/15352482/files/load-reference-ppm.zip/content",
+        "filename": "load-reference-ppm.zip",
+        "known_hash": "md5:1cf6ecb6d3bdbfdeffb6e4ea6b925a58",
+        "archive": "zip"
+      }
+    ],
+    "homepage": "https://zenodo.org/records/15352482",
+    "paper": "https://eprint.iacr.org/2025/811",
+    "license": "CC-BY-4.0",
+    "size_bytes": 3597104760,
+    "disk_bytes": 7192807409,
+    "notes": "100,000 fixed-key power traces, each with 50,000 samples, captured from unprotected pair-pointwise multiplication during CRYSTALS-Kyber decapsulation on a Cortex-M4 target. Confirmed on the real file: dataset.labels (MATLAB noncesA) is (n, 12) = two 6-value blocks [sk_lo, sk_hi, in_lo, in_hi, out_lo, out_hi]; sk is the fixed secret NTT coefficient (block 0 = 558, block 1 = 17), in the known ciphertext input (varies), and out = fqmul(sk, in) = montgomery_reduce(sk*in) (Q=3329, QINV=62209) verified bit-exact.",
+    "adapter": "matlab",
+    "adapter_config": {
+      "chunked": true,
+      "chunk_glob": "tracesA*.mat",
+      "field_files": {
+        "traces": {
+          "var": "tracesA",
+          "anchor": true
+        },
+        "labels": {
+          "var": "noncesA",
+          "from_anchor": [
+            "tracesA",
+            "noncesA"
+          ]
+        }
+      },
+      "algorithm": "CRYSTALS-Kyber",
+      "metadata": {
+        "label_note": "noncesA holds sensitive PPM intermediates (a0,b1,...)"
+      }
+    },
+    "fields": ["labels", "traces"],
+    "metadata": {
+      "format": "matlab",
+      "algorithm": "CRYSTALS-Kyber",
+      "measurement": "power",
+      "device": "STM32F3",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "fixed",
+      "n_samples": 50000,
+      "year": 2025
+    }
+  },
+  "ge-wars": {
+    "display_name": "GE Wars 2025",
+    "aliases": [
+      "gewars",
+      "ge-wars-2025",
+      "ches-challenge-2025"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://drive.usercontent.google.com/download?id=1bz1AnHSLt4p-Q_0sXIY72DizQGKbOI1b&export=download&confirm=t",
+        "filename": "CHES_Challenge.h5",
+        "known_hash": "sha256:132ae2e9a8213c983bf3b63449e9572d5d71d3b376a75b236415d4a728b9379f",
+        "archive": null
+      }
+    ],
+    "homepage": "https://pace-tl.gitbook.io/ches-challenge-2025/quickstart-2",
+    "paper": "https://eprint.iacr.org/2024/1381",
+    "license": "not stated",
+    "license_source": "https://pace-tl.gitbook.io/ches-challenge-2025/quickstart-2",
+    "notes": "GE Wars: The Deep Learning SCA Battle public dataset with 500,000 profiling and 100,000 attack electromagnetic traces in an ASCAD-like HDF5 layout. Measurements target the first byte after AddRoundKey in the first AES-128 round on an unprotected Raspberry Pi 4B with a Broadcom BCM2711 quad-core ARM Cortex-A72 processor.",
+    "size_bytes": 4219804480,
+    "disk_bytes": 4219804480,
+    "adapter": "ascad",
+    "fields": ["keys", "plaintexts", "traces"],
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "electromagnetic",
+      "device": "ARM Cortex-A72",
+      "platform": "arm-cortex-a",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "variable",
+      "n_samples": 7000,
+      "year": 2025
+    }
+  },
+  "ecc-dataset": {
+    "display_name": "Ecc datasets",
+    "aliases": [
+      "curve25519-cswap",
+      "curve25519-pointer",
+      "curve25519-arith",
+      "cswap-pointer",
+      "ecc-cswap"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://www.dropbox.com/scl/fi/cpoaco0zwmgzdarj2427p/ecc_datasets.zip?rlkey=d71qkr0fdlkmtwmxohwezsxln&dl=1",
+        "filename": "ecc_datasets.zip",
+        "known_hash": "sha256:f0c78012df7e77cf365c9541593b77332ac6ab141c26ec17a794f4b044215bf0",
+        "archive": "zip"
+      }
+    ],
+    "homepage": "https://eprint.iacr.org/2017/1204.pdf",
+    "paper": "https://eprint.iacr.org/2017/1204.pdf",
+    "license": "not stated",
+    "license_source": "https://github.com/AISyLab/IterativeDLFramework",
+    "size_bytes": 692429014,
+    "disk_bytes": 3446743206,
+    "notes": "Electromagnetic side-channel dataset targeting the CSWAP-pointer implementation of Curve25519 on a 32-bit ARM Cortex-M4F. The dataset contains 300 traces (250 profiling and 50 attack), each with 1,000 samples. The implementation uses a constant-time Montgomery ladder with coordinate re-randomization and a fresh random scalar for every scalar multiplication.",
+    "adapter": "flat-hdf5",
+    "adapter_config": {
+      "splits": {
+        "profiling": "profiling_traces",
+        "attack": "attacking_traces"
+      },
+      "default_split": "profiling",
+      "labels": {
+        "profiling": "profiling_data",
+        "attack": "attacking_data"
+      },
+      "preferred_filename": "cswap_pointer.h5",
+      "algorithm": "Curve25519"
+    },
+    "fields": {"profiling": ["labels", "traces"], "attack": ["labels", "traces"]},
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "Curve25519",
+      "measurement": "electromagnetic",
+      "device": "32-bit ARM Cortex-M4F",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "constant-time",
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 1000,
+      "year": 2017
+    }
+  },
+  "aes-ptv2-pinata": {
+    "display_name": "AES PTv2 Piñata",
+    "aliases": [
+      "aes-ptv2",
+      "ptv2-pinata",
+      "pinata"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://drive.usercontent.google.com/download?id=1n8KQuq-giq2ZJvCLzBL_L-2zlq-nDk-q&export=download&confirm=t",
+        "filename": "AES_PTv2_Pinata.rar",
+        "known_hash": "sha256:0a6e28cc1703be958d4803bc8e94980184445132bb75791208202aaf13f25631",
+        "archive": "rar"
+      }
+    ],
+    "homepage": "https://github.com/urioja/AESPTv2",
+    "paper": "https://github.com/urioja/AESPTv2",
+    "license": "not stated",
+    "license_source": "https://api.github.com/repos/urioja/AESPTv2/license",
+    "size_bytes": 2354398332,
+    "disk_bytes": 6494815116,
+    "notes": "Power side-channel dataset collected on a Riscure Piñata STM32F4 Cortex-M4F. The Piñata subset contains 150,000 traces (100,000 profiling and 50,000 attack), each with 1,260 samples stored in HDF5 format. The repository also includes four identical devices (D1–D4), each with datasets acquired without countermeasures and with masking schemes MS1 and MS2, using both fixed and random keys.",
+    "adapter": "hdf5",
+    "adapter_config": {
+      "splits": {
+        "profiling": "Unprotected/Profiling",
+        "attack": "Unprotected/Attack"
+      },
+      "default_split": "profiling",
+      "traces_dataset": "Traces",
+      "field_aliases": {
+        "plaintexts": ["plaintext"],
+        "keys": ["key"],
+        "masks": ["masks"]
+      },
+      "metadata_dataset": "MetaData",
+      "labels_dataset": "Labels",
+      "preferred_filename": "AES_PTv2_Pinata.h5",
+      "algorithm": "AES-128"
+    },
+    "fields": {"profiling": ["keys", "labels", "plaintexts", "traces"], "attack": ["keys", "labels", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "Riscure Piñata STM32F4 Cortex-M4F",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "variable",
+      "n_samples": 1260,
+      "year": 2021
+    }
+  },
+  "ches-ctf-2018": {
+    "display_name": "CHES CTF 2018 (AISyLab)",
+    "aliases": [
+      "ches-ctf",
+      "ctf2018",
+      "aisylab-ctf",
+      "ches2018"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://www.dropbox.com/scl/fi/98yxftt29sxcpu7c6c06c/ches_ctf.h5?rlkey=nk524nlgwiestp3bp1dikbr9j&dl=1",
+        "filename": "ches_ctf.h5",
+        "known_hash": "sha256:af47caa04894be0fa68a78147826ce07d09d8bfd270c355bc5ea63e342884218",
+        "archive": null
+      }
+    ],
+    "homepage": null,
+    "paper": null,
+    "license": "not stated",
+    "license_source": "https://github.com/AISyLab/EnsembleSCA",
+    "size_bytes": 442404096,
+    "disk_bytes": 442404096,
+    "notes": "Power side-channel dataset from the CHES CTF 2018 challenge. Contains 50,000 HDF5 traces (45,000 profiling and 5,000 attack), each with 2,200 samples, acquired from a 32-bit STM microcontroller running a first-order XOR Boolean-masked AES-128 implementation with a fixed key.",
+    "adapter": "flat-hdf5",
+    "adapter_config": {
+      "splits": {
+        "profiling": "profiling_traces",
+        "attack": "attacking_traces"
+      },
+      "default_split": "profiling",
+      "data": {
+        "profiling": "profiling_data",
+        "attack": "attacking_data"
+      },
+      "data_columns": {
+        "plaintexts": [0, 16],
+        "ciphertexts": [16, 32],
+        "keys": [32, 48]
+      },
+      "preferred_filename": "ches_ctf.h5",
+      "algorithm": "AES-128"
+    },
+    "fields": {"profiling": ["ciphertexts", "keys", "plaintexts", "traces"], "attack": ["ciphertexts", "keys", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "32-bit STM microcontroller",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "fixed",
+      "n_samples": 2200,
+      "year": 2018
+    }
+  },
+  "dpacontest-v1-secmatv1-asic": {
+    "display_name": "DPA Contest v1 SecMatV1 ASIC",
+    "aliases": [
+      "dpa-v1",
+      "dpac-v1",
+      "dpacontest-v1",
+      "dpa-v1-secmatv1"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://cloud.telecom-paris.fr/s/8KWK5PnApP4DNy7/download?path=%2F&files=secmatv1_2006_04_0809.zip.part0",
+        "filename": "secmatv1_2006_04_0809.zip.part0",
+        "known_hash": "sha256:eb5f5075d56fcca7f6d6ac243209eaac1162dfaeda6be44e9d0ae9a61ca3f74c",
+        "archive": "zip-parts"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/8KWK5PnApP4DNy7/download?path=%2F&files=secmatv1_2006_04_0809.zip.part1",
+        "filename": "secmatv1_2006_04_0809.zip.part1",
+        "known_hash": "sha256:5ff6108bb7383af8922bf11cb6127f6187c26b15a7e5d261c8cca929a3b141cd",
+        "archive": "zip-parts"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/8KWK5PnApP4DNy7/download?path=%2F&files=secmatv1_2006_04_0809.zip.part2",
+        "filename": "secmatv1_2006_04_0809.zip.part2",
+        "known_hash": "sha256:35c863309fb5b843be54d02559e03321e0158516336a573e30af97d5b2151f02",
+        "archive": "zip-parts"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/8KWK5PnApP4DNy7/download?path=%2F&files=secmatv1_2006_04_0809.zip.part3",
+        "filename": "secmatv1_2006_04_0809.zip.part3",
+        "known_hash": "sha256:2a0b3a8506cae3144f66d977ed3d3300119d336b5460149c8cbaf3a132d64d4d",
+        "archive": "zip-parts"
+      }
+    ],
+    "homepage": "https://cloud.telecom-paris.fr/s/8KWK5PnApP4DNy7",
+    "paper": null,
+    "license": "not stated",
+    "license_source": "https://dpacontest.telecom-paris.fr/index.php",
+    "notes": "Multipart ZIP archive (four parts) containing the DPA Contest v1 SecMatV1 ASIC dataset. The parts are joined and extracted automatically after download. No license is stated; the DPA Contest site says its data and code \"apply to the evaluation of academic, unprotected and whitebox cryptographic implementations\" and are not meant to encourage piracy on commercial hardware.",
+    "size_bytes": 4008748740,
+    "disk_bytes": 6511608893,
+    "adapter": "agilent-wave",
+    "adapter_config": {
+      "file_glob": "wave_*.bin",
+      "filename_fields": {
+        "keys": "k=([0-9a-fA-F]+)",
+        "plaintexts": "m=([0-9a-fA-F]+)",
+        "ciphertexts": "c=([0-9a-fA-F]+)"
+      },
+      "algorithm": "DES",
+      "metadata": {
+        "note": "Agilent AG10 waveforms; key/plaintext/ciphertext parsed from filename (k=/m=/c=)"
+      }
+    },
+    "fields": ["ciphertexts", "keys", "plaintexts", "traces"],
+    "metadata": {
+      "format": "binary",
+      "algorithm": "DES",
+      "measurement": "power",
+      "device": "SecmatV1 ASIC",
+      "platform": "asic",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "fixed",
+      "n_samples": 20003,
+      "year": 2008
+    }
+  },
+  "dpacontest-v3-secmatv3-des": {
+    "display_name": "DPA Contest v1 SecMatV3 DES (ASIC)",
+    "aliases": [
+      "dpacontest-v1-secmatv3-des",
+      "dpa-v3",
+      "dpac-v3",
+      "dpacontest-v3",
+      "secmatv3-des",
+      "dpa-v3-des"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://cloud.telecom-paris.fr/s/js8bcrAnZc4rLQb/download?path=%2F&files=secmatv3_20070924_des.zip",
+        "filename": "secmatv3_20070924_des.zip",
+        "known_hash": "sha256:ba1b7e72cf0e39203f677dbdbde3fba8a1be5fa998326e05cc38cb9e9af64ade",
+        "archive": "zip"
+      }
+    ],
+    "homepage": "https://cloud.telecom-paris.fr/s/js8bcrAnZc4rLQb",
+    "paper": null,
+    "license": "not stated",
+    "license_source": "https://dpacontest.telecom-paris.fr/index.php",
+    "notes": "DPA Contest v1 trace table: power traces of the unprotected DES crypto-processor of the SecMatV3 SoC in ASIC (secmatv3_20070924_des). The canonical name keeps 'v3' from the SecMatV3 chip for backward compatibility; DPA Contest v3 itself was an AES contest. No license is stated; the DPA Contest site says its data and code \"apply to the evaluation of academic, unprotected and whitebox cryptographic implementations\" and are not meant to encourage piracy on commercial hardware.",
+    "size_bytes": 973518878,
+    "disk_bytes": 2619255022,
+    "adapter": "agilent-wave",
+    "adapter_config": {
+      "file_glob": "wave_*.bin",
+      "filename_fields": {
+        "keys": "k=([0-9a-fA-F]+)",
+        "plaintexts": "m=([0-9a-fA-F]+)",
+        "ciphertexts": "c=([0-9a-fA-F]+)"
+      },
+      "algorithm": "DES",
+      "metadata": {
+        "note": "Agilent AG10 waveforms; key/plaintext/ciphertext parsed from filename (k=/m=/c=)"
+      }
+    },
+    "fields": ["ciphertexts", "keys", "plaintexts", "traces"],
+    "metadata": {
+      "format": "binary",
+      "algorithm": "DES",
+      "measurement": "power",
+      "device": "SecmatV3 ASIC",
+      "platform": "asic",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "fixed",
+      "n_samples": 5003,
+      "year": 2008
+    }
+  },
+  "dpacontest-v3-secmatv3-des-20071219": {
+    "display_name": "DPA Contest v1 SecMatV3 DES (FPGA, 2007-12-19)",
+    "aliases": [
+      "dpacontest-v1-secmatv3-des-20071219",
+      "dpa-v3-des-20071219",
+      "dpacontest-v3-des-20071219",
+      "secmatv3-20071219-des",
+      "secmatv3-des-20071219"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://cloud.telecom-paris.fr/s/qjDtWRHy4WEDBcm/download?path=%2F&files=secmatv3_20071219_des.zip.part0",
+        "filename": "secmatv3_20071219_des.zip.part0",
+        "known_hash": "sha256:6fb542311ba43770bf6770b3e8af72edfeb3b8e8edfb4f8a3503873e192f270d",
+        "archive": "zip-parts"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/qjDtWRHy4WEDBcm/download?path=%2F&files=secmatv3_20071219_des.zip.part1",
+        "filename": "secmatv3_20071219_des.zip.part1",
+        "known_hash": "sha256:0bd26ac6675ac91a5839eab62c89e9446fdcd7b66b2c479f1f11a1994b105351",
+        "archive": "zip-parts"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/qjDtWRHy4WEDBcm/download?path=%2F&files=secmatv3_20071219_des.zip.part2",
+        "filename": "secmatv3_20071219_des.zip.part2",
+        "known_hash": "sha256:cc1e10a92c3910902801eed34db0cd9ddaface8f05847acf7ba8a11219cd0c02",
+        "archive": "zip-parts"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/qjDtWRHy4WEDBcm/download?path=%2F&files=secmatv3_20071219_des.zip.part3",
+        "filename": "secmatv3_20071219_des.zip.part3",
+        "known_hash": "sha256:e915f7c35eb2b41a530cba2b2723beb72692bcee0fd5db9226a069e776e346be",
+        "archive": "zip-parts"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/qjDtWRHy4WEDBcm/download?path=%2F&files=secmatv3_20071219_des.zip.part4",
+        "filename": "secmatv3_20071219_des.zip.part4",
+        "known_hash": "sha256:36d79f49117d356e2af369563dc33712f698ca932f25fa9206df0018502636a0 ",
+        "archive": "zip-parts"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/qjDtWRHy4WEDBcm/download?path=%2F&files=secmatv3_20071219_des.zip.part5",
+        "filename": "secmatv3_20071219_des.zip.part5",
+        "known_hash": "sha256:46840011e73672daa8e2f9c0bec0d5f47f72ae767a5a0c8f0abea0635dc2ad9c",
+        "archive": "zip-parts"
+      }
+    ],
+    "homepage": "https://cloud.telecom-paris.fr/s/qjDtWRHy4WEDBcm",
+    "paper": null,
+    "license": "not stated",
+    "license_source": "https://dpacontest.telecom-paris.fr/index.php",
+    "notes": "DPA Contest v1 trace table: SecMatV3 SoC in FPGA (Altera Stratix). Multipart ZIP archive (six parts) containing the SecMatV3 DES dataset released on 2007-12-19. The parts are joined and extracted automatically after download. No license is stated; the DPA Contest site says its data and code \"apply to the evaluation of academic, unprotected and whitebox cryptographic implementations\" and are not meant to encourage piracy on commercial hardware.",
+    "size_bytes": 6307858848,
+    "disk_bytes": 13562524528,
+    "adapter": "agilent-wave",
+    "adapter_config": {
+      "file_glob": "wave_*.bin",
+      "filename_fields": {
+        "keys": "k=([0-9a-fA-F]+)",
+        "plaintexts": "m=([0-9a-fA-F]+)",
+        "ciphertexts": "c=([0-9a-fA-F]+)"
+      },
+      "algorithm": "DES",
+      "metadata": {
+        "note": "Agilent AG10 waveforms; key/plaintext/ciphertext parsed from filename (k=/m=/c=)"
+      }
+    },
+    "fields": ["ciphertexts", "keys", "plaintexts", "traces"],
+    "metadata": {
+      "format": "binary",
+      "algorithm": "DES",
+      "measurement": "power",
+      "device": "SecMatV3 FPGA (Altera Stratix)",
+      "platform": "fpga",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "fixed",
+      "n_samples": 50003,
+      "year": 2008
+    }
+  },
+  "dpacontest-v2": {
+    "display_name": "DPA Contest v2",
+    "aliases": [
+      "dpav2",
+      "dpa-v2",
+      "dpac-v2",
+      "dpa-contest-v2"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://cloud.telecom-paris.fr/s/N5qgyMdxEcqipN2/download?path=%2F&files=DPA_contest2_public_base_diff_vcc_a128_2009_12_23.tar.bz2.part0",
+        "filename": "DPA_contest2_public_base_diff_vcc_a128_2009_12_23.tar.bz2.part0",
+        "known_hash": "sha256:1f907f5eaafc20b6a6321a6feb7ac964548cc99e74714c1aa6f0beaca85590d9",
+        "archive": "tar.bz2-parts"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/N5qgyMdxEcqipN2/download?path=%2F&files=DPA_contest2_public_base_diff_vcc_a128_2009_12_23.tar.bz2.part1",
+        "filename": "DPA_contest2_public_base_diff_vcc_a128_2009_12_23.tar.bz2.part1",
+        "known_hash": "sha256:82f0e741d6dee6e9ee08defb507c4a78e830b0afafc6876928667281356ea913",
+        "archive": "tar.bz2-parts"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/N5qgyMdxEcqipN2/download?path=%2F&files=DPA_contest2_public_base_diff_vcc_a128_2009_12_23.tar.bz2.part2",
+        "filename": "DPA_contest2_public_base_diff_vcc_a128_2009_12_23.tar.bz2.part2",
+        "known_hash": "sha256:033701a902fc970d6e5d7013b4f23a5d963497f332ac1d4817e678fb54a493b0",
+        "archive": "tar.bz2-parts"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/N5qgyMdxEcqipN2/download?path=%2F&files=DPA_contest2_public_base_diff_vcc_a128_2009_12_23.tar.bz2.part3",
+        "filename": "DPA_contest2_public_base_diff_vcc_a128_2009_12_23.tar.bz2.part3",
+        "known_hash": "sha256:d57a23c8099357798dc9652f06b2d0be4c88df0a87fb53a194ad01e2557450e2",
+        "archive": "tar.bz2-parts"
+      }
+    ],
+    "homepage": "https://dpacontest.telecom-paris.fr/v2/tables.php",
+    "paper": "https://link.springer.com/article/10.1007/s13389-014-0075-9",
+    "license": "not stated",
+    "license_source": "https://dpacontest.telecom-paris.fr/index.php",
+    "notes": "Multipart tar.bz2 archive (four parts) containing the DPA Contest v2 AES-128 benchmark. The parts are joined and extracted automatically after download. No license is stated; the DPA Contest site says its data and code \"apply to the evaluation of academic, unprotected and whitebox cryptographic implementations\" and are not meant to encourage piracy on commercial hardware.",
+    "size_bytes": 3685468364,
+    "disk_bytes": 11714968117,
+    "adapter": "ascii-wave",
+    "adapter_config": {
+      "file_glob": "wave_*",
+      "comment_prefix": "#",
+      "dtype": "int16",
+      "index_regex": "n=(\\d+)",
+      "filename_fields": {
+        "keys": "_k=([0-9a-f]+)_",
+        "plaintexts": "_m=([0-9a-f]+)_",
+        "ciphertexts": "_c=([0-9a-f]+)"
+      },
+      "algorithm": "AES-128",
+      "metadata": {
+        "note": "labels are in each wave filename: k=key, m=plaintext, c=ciphertext (16 bytes each, verified AES(m,k)=c). The public base has 640,000 traces under 32 keys, 20,000 traces per key. Hardware AES leaks best under a last-round Hamming-distance model."
+      }
+    },
+    "fields": ["ciphertexts", "keys", "plaintexts", "traces"],
+    "metadata": {
+      "format": "other",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "SASEBO GII FPGA",
+      "platform": "fpga",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "variable",
+      "n_samples": 3253,
+      "year": 2010
+    }
+  },
+  "dpacontest-v4-1-rsm": {
+    "display_name": "DPA Contest v4.1 AES-256 RSM",
+    "aliases": [
+      "dpav4",
+      "dpav4.1",
+      "dpa-v4",
+      "dpa-v4.1",
+      "dpav4-rsm",
+      "aes256-rsm",
+      "dpacontest-v4.1"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=dpav4_rsm_index",
+        "filename": "dpav4_rsm_index",
+        "known_hash": "sha256:fe400ee7c28e2ffa6ad659a5aa68f98a40a5e5de96ee4fbbadc2887c64d43ccc",
+        "archive": null
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_00000_part1.zip",
+        "filename": "DPA_contestv4_rsm_00000_part1.zip",
+        "known_hash": "sha256:ed68b913d619969672c2f725280f54074bb13237e5e9d79eed77e31644b856d7",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_00000_part2.zip",
+        "filename": "DPA_contestv4_rsm_00000_part2.zip",
+        "known_hash": "sha256:09c6776fd81157186b83ff8040c221fcf65cf1ff855166f27459a53d4734eacb",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_10000_part1.zip",
+        "filename": "DPA_contestv4_rsm_10000_part1.zip",
+        "known_hash": "sha256:cb9c6f80e7381b9630a2b38721bf11065735f175aa30eecfd88557fe26c69e57",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_10000_part2.zip",
+        "filename": "DPA_contestv4_rsm_10000_part2.zip",
+        "known_hash": "sha256:ce98cc24e3639ad7a71c0a0fdf9ab42507491b5d68ad662a61e2bacf81d0764a",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_20000_part1.zip",
+        "filename": "DPA_contestv4_rsm_20000_part1.zip",
+        "known_hash": "sha256:1103b3b03271e6197f86844d896eb46ad9eee008c00b29e8a1889468818ee8ca",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_20000_part2.zip",
+        "filename": "DPA_contestv4_rsm_20000_part2.zip",
+        "known_hash": "sha256:a00fdaa6da65b626246bfde9feb0553203fa671a7635def3580840f2c36f2290",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_30000_part1.zip",
+        "filename": "DPA_contestv4_rsm_30000_part1.zip",
+        "known_hash": "sha256:ead29f401431f55ad803f4951008f1c43bac5fb070503bbfd46519f745b4edc1",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_30000_part2.zip",
+        "filename": "DPA_contestv4_rsm_30000_part2.zip",
+        "known_hash": "sha256:020f1ba92c46bbd3b8ab79573d2c5e3e9e11e8d6752183c8c447ea33b7d3632b",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_40000_part1.zip",
+        "filename": "DPA_contestv4_rsm_40000_part1.zip",
+        "known_hash": "sha256:0ae5a47091412ee95889289ccbab89af56b1f77c1d9c29785a8af837a7f65c70",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_40000_part2.zip",
+        "filename": "DPA_contestv4_rsm_40000_part2.zip",
+        "known_hash": "sha256:7f2fd92fdec71f5a896eb1a97e8536751a547cc69890e7f08967a96edf140485",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_50000_part1.zip",
+        "filename": "DPA_contestv4_rsm_50000_part1.zip",
+        "known_hash": "sha256:7cb331115b1eb49ca1ccb8b8755fe9a0fabdfd9eec81a8ab6ce76722b83d9f1b",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_50000_part2.zip",
+        "filename": "DPA_contestv4_rsm_50000_part2.zip",
+        "known_hash": "sha256:ad347635387f89de97ee04c4510c29e8c327ad34301f8ace1042130b3b8ebc26",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_60000_part1.zip",
+        "filename": "DPA_contestv4_rsm_60000_part1.zip",
+        "known_hash": "sha256:65b74f18431070346e3381d2dc63a869eb905ce6fc7c584cc1f8631bf5d9d30f",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_60000_part2.zip",
+        "filename": "DPA_contestv4_rsm_60000_part2.zip",
+        "known_hash": "sha256:6cdd1f0ba6eeddd9bb02681addcbb465da2f4b7dbe550c372d33ec11a9d09d8f",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_70000_part1.zip",
+        "filename": "DPA_contestv4_rsm_70000_part1.zip",
+        "known_hash": "sha256:65a31de15b964e7adcf5ba885162ea656e87f0cd7d244302c8fdffa24de1c4d8",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_70000_part2.zip",
+        "filename": "DPA_contestv4_rsm_70000_part2.zip",
+        "known_hash": "sha256:a246e680f92565268f1cda6621229762803a2e599640a3a78ffddedf4e26d285",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_80000_part1.zip",
+        "filename": "DPA_contestv4_rsm_80000_part1.zip",
+        "known_hash": "sha256:6dda01a6bbbcb9a5b7f609d60404efe8539e9213fab1332b7467e402740bf679",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_80000_part2.zip",
+        "filename": "DPA_contestv4_rsm_80000_part2.zip",
+        "known_hash": "sha256:45b61b0b71110f7194d46773a221672fc73047ea956d3e6583687028f8e2851a",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_90000_part1.zip",
+        "filename": "DPA_contestv4_rsm_90000_part1.zip",
+        "known_hash": "sha256:fd59fead709772888b9637eb76803873a4e2905eca392a57df4697b1f1a7620f",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL/download?path=%2F&files=DPA_contestv4_rsm_90000_part2.zip",
+        "filename": "DPA_contestv4_rsm_90000_part2.zip",
+        "known_hash": "sha256:ff2341c8fdaa77f423405e526f2d0cdda2a244c789573493a198d9f94de3f556",
+        "archive": "zip"
+      }
+    ],
+    "homepage": "https://cloud.telecom-paris.fr/s/PP79GTSj9mmg4xL",
+    "paper": "https://dpacontest.telecom-paris.fr/v4/",
+    "license": "not stated",
+    "license_source": "https://dpacontest.telecom-paris.fr/index.php",
+    "notes": "DPA Contest v4.1 AES-256 RSM benchmark. The dataset consists of the dpav4_rsm_index file and twenty ZIP archives containing the traces. No license is stated; the DPA Contest site says its data and code \"apply to the evaluation of academic, unprotected and whitebox cryptographic implementations\" and are not meant to encourage piracy on commercial hardware.",
+    "size_bytes": 21758376055,
+    "disk_bytes": 43479151670,
+    "adapter": "lecroy-index",
+    "adapter_config": {
+      "index_filename": "dpav4_rsm_index",
+      "columns": {
+        "keys": 0,
+        "plaintexts": 1,
+        "ciphertexts": 2,
+        "directory": 4,
+        "filename": 5
+      },
+      "algorithm": "AES-256",
+      "metadata": {
+        "note": "v4.1 index columns per DPA docs (key64/pt/ct/offset/dir/file)"
+      }
+    },
+    "fields": ["ciphertexts", "keys", "plaintexts", "traces"],
+    "metadata": {
+      "format": "binary",
+      "algorithm": "AES-256",
+      "measurement": "electromagnetic",
+      "device": "ATMega-163",
+      "platform": "avr",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "fixed",
+      "n_samples": 435002,
+      "year": 2013
+    }
+  },
+  "dpacontest-v4-2": {
+    "display_name": "DPA Contest v4.2 AES-128 (masked, shuffled)",
+    "aliases": [
+      "dpav4.2",
+      "dpa-v4.2",
+      "dpav42",
+      "aes256-rsm-v4.2"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=dpav4_2_index",
+        "filename": "dpav4_2_index",
+        "known_hash": "sha256:7532f30cfba6e025d64f2a40434ae6862909e2b50e6b990ecad00b2861b9cb10",
+        "archive": null
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k00_part1.zip",
+        "filename": "DPA_contestv4_2_k00_part1.zip",
+        "known_hash": "sha256:cb7a45ce10a9863b286dce1d66f9ef36b972f58755052f61ebc6ed9002a0bff3",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k00_part2.zip",
+        "filename": "DPA_contestv4_2_k00_part2.zip",
+        "known_hash": "sha256:d6b3a0b8950347bc04d2eb1a096442f681ad1df1b7aedaa4118090cb684c024f",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k01_part1.zip",
+        "filename": "DPA_contestv4_2_k01_part1.zip",
+        "known_hash": "sha256:b4e8c2eeff0a582638bdbe3df66efef242939da4f9bc9f75d52e3bdd4229337f",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k01_part2.zip",
+        "filename": "DPA_contestv4_2_k01_part2.zip",
+        "known_hash": "sha256:6b3fc14509a7f2357a1d016f21c1fa2f8cce5db3638e86831fd2984ff67795bf",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k02_part1.zip",
+        "filename": "DPA_contestv4_2_k02_part1.zip",
+        "known_hash": "sha256:ed73cedf00fe1091081780e1567bdc552e36dd29dcfbc77964119d3819edda76",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k02_part2.zip",
+        "filename": "DPA_contestv4_2_k02_part2.zip",
+        "known_hash": "sha256:6a50a3f410481a7eb5dc97c725ecfd7a62dde8275a3c32649101e52656778e90",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k03_part1.zip",
+        "filename": "DPA_contestv4_2_k03_part1.zip",
+        "known_hash": "sha256:83b07f964ac002b18d6f3bdfd34e32f3634aee7c925243fff412f98ad7e91529",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k03_part2.zip",
+        "filename": "DPA_contestv4_2_k03_part2.zip",
+        "known_hash": "sha256:81aa9482f6cdf1b412e9c558e248fc142033c038d145864f7fb9c726a37153f6",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k04_part1.zip",
+        "filename": "DPA_contestv4_2_k04_part1.zip",
+        "known_hash": "sha256:78c96c3cecff4b25057420626d2050b34545de988506822f722e0b52b7083608",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k04_part2.zip",
+        "filename": "DPA_contestv4_2_k04_part2.zip",
+        "known_hash": "sha256:0b2326d87240447db12172ab63305bbfd9463a8510d3c6cda8288519cc601163",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k05_part1.zip",
+        "filename": "DPA_contestv4_2_k05_part1.zip",
+        "known_hash": "sha256:79ab0ec729e322af64f743a59da12cdd1c620ce38e0f53caeb57c5f9cffc6561",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k05_part2.zip",
+        "filename": "DPA_contestv4_2_k05_part2.zip",
+        "known_hash": "sha256:d9ad23bd7878e22eb7d0730a8684fd9f519f2449ea2402ffa6b9027d0d1694cf",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k06_part1.zip",
+        "filename": "DPA_contestv4_2_k06_part1.zip",
+        "known_hash": "sha256:5180abb3c8b13636a1fe63c85e774d90dfce8a45e175f9ed87c95f4276d76979",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k06_part2.zip",
+        "filename": "DPA_contestv4_2_k06_part2.zip",
+        "known_hash": "sha256:ffec74812746f7f640a80885c9140de3ea47f514bce1501c31e38cf1117d084b",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k07_part1.zip",
+        "filename": "DPA_contestv4_2_k07_part1.zip",
+        "known_hash": "sha256:3f8da42e4714354fab19f42ec7d98b849818a98ce88ccf556d962cf4604d1801",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k07_part2.zip",
+        "filename": "DPA_contestv4_2_k07_part2.zip",
+        "known_hash": "sha256:684af5af4270e9f6540c3ad13307b176ddc00bd88761f82a4a9c98ab3811f77f",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k08_part1.zip",
+        "filename": "DPA_contestv4_2_k08_part1.zip",
+        "known_hash": "sha256:68e006d66f9e79ca9a8a4828c1f301e21a09f3abe37851f3029b0bda9aa50e03",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k08_part2.zip",
+        "filename": "DPA_contestv4_2_k08_part2.zip",
+        "known_hash": "sha256:1c31b3d2954ef393028205817a997852e86ab8dedd2d9cd860a0af0daaf8c74d",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k09_part1.zip",
+        "filename": "DPA_contestv4_2_k09_part1.zip",
+        "known_hash": "sha256:bd608c16d910d2ec7fab9b89f30be2853b0d37fc29b27c33e1eabdf5bfccce6d",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k09_part2.zip",
+        "filename": "DPA_contestv4_2_k09_part2.zip",
+        "known_hash": "sha256:eb5dd81f66f3e0599483e0efa9c5019023e88785a03ae4d043052637915e9abe",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k10_part1.zip",
+        "filename": "DPA_contestv4_2_k10_part1.zip",
+        "known_hash": "sha256:fd98abd43047aa82468b690a35bee54e48db939a01aff77f26dae218859cabc6",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k10_part2.zip",
+        "filename": "DPA_contestv4_2_k10_part2.zip",
+        "known_hash": "sha256:4958d1bf73eb6f149060488eaf7c2d9ebc00514cc31a36c142596bb353f13a9c",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k11_part1.zip",
+        "filename": "DPA_contestv4_2_k11_part1.zip",
+        "known_hash": "sha256:e80991ff877cbf6ad2db247fe9146b97a66cc01fa01cb9ac2e547dbed037e916",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k11_part2.zip",
+        "filename": "DPA_contestv4_2_k11_part2.zip",
+        "known_hash": "sha256:9e971956c62aa54f84e2ed6090ecf6220d84a19282d39a5690e10e0bf05363de",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k12_part1.zip",
+        "filename": "DPA_contestv4_2_k12_part1.zip",
+        "known_hash": "sha256:a948b165f26857cc216489a009201226158d37a4baa468ee2a46b6b1851dc556",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k12_part2.zip",
+        "filename": "DPA_contestv4_2_k12_part2.zip",
+        "known_hash": "sha256:44b567172bedf233026251cf4e8accc4881fc73ec668800ed205fb9160ebfa82",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k13_part1.zip",
+        "filename": "DPA_contestv4_2_k13_part1.zip",
+        "known_hash": "sha256:dd7de66f65bf5cbd652bcef34266056b0de0a91cd06a3bd461ce0298c0afd8f5",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k13_part2.zip",
+        "filename": "DPA_contestv4_2_k13_part2.zip",
+        "known_hash": "sha256:d4d508da8ce0cd63de45d8097d48085a90a94002c1cce96ca7e820e44a17371d",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k14_part1.zip",
+        "filename": "DPA_contestv4_2_k14_part1.zip",
+        "known_hash": "sha256:f0c87231a21e88439adca0cda7f21c4edaffbaaafedcaf5e0b29ea5314477c5a",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k14_part2.zip",
+        "filename": "DPA_contestv4_2_k14_part2.zip",
+        "known_hash": "sha256:4a4e40859823eaaee180dca45dcc8eec75565bf294d2005546384cf318e26231",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k15_part1.zip",
+        "filename": "DPA_contestv4_2_k15_part1.zip",
+        "known_hash": "sha256:6a25273b0396e717781b22bfb6fc10a5955458344c7db552895dbc7ef1b68d92",
+        "archive": "zip"
+      },
+      {
+        "url": "https://cloud.telecom-paris.fr/s/JM2iaRZfwrNKtSp/download?path=%2F&files=DPA_contestv4_2_k15_part2.zip",
+        "filename": "DPA_contestv4_2_k15_part2.zip",
+        "known_hash": "sha256:74f3137a670da0b86c936be2171ac905dbdb5964ffa9ed1c228694a1e484652c",
+        "archive": "zip"
+      }
+    ],
+    "homepage": "https://dpacontest.telecom-paris.fr/v4/42_doc.php",
+    "paper": null,
+    "license": "not stated",
+    "license_source": "https://dpacontest.telecom-paris.fr/index.php",
+    "notes": "DPA Contest v4.2 benchmark. Downloads the index file together with the 32 ZIP archives containing the traces: 80,000 traces under 16 keys, 5,000 traces per key (checked against the index and the official traces page). Known implementation issues, from the official documentation (https://dpacontest.telecom-paris.fr/v4/42_doc.php): the traces were updated in July 2015 and no longer contain the first bug found (October 2014), but they still contain the second one (August 2015): 'the permutation function Shuffle10 is used before the first round instead of Shuffle0'. The mask set used differs from the published description (page 4 of the SPACE 2014 paper): [0x03, 0x0c, 0x35, 0x3a, 0x50, 0x5f, 0x66, 0x69, 0x96, 0x99, 0xa0, 0xaf, 0xc5, 0xca, 0xf3, 0xfc]. Users of these traces are asked to cite 'RSM: A small and fast countermeasure for AES, secure against 1st and 2nd-order zero-offset SCAs' (DATE 2012). No license is stated; the DPA Contest site says its data and code \"apply to the evaluation of academic, unprotected and whitebox cryptographic implementations\" and are not meant to encourage piracy on commercial hardware.",
+    "size_bytes": 66333467512,
+    "adapter": "lecroy-index",
+    "adapter_config": {
+      "index_filename": "dpav4_2_index",
+      "columns": {
+        "keys": 0,
+        "plaintexts": 1,
+        "ciphertexts": 2,
+        "directory": 6,
+        "filename": 7
+      },
+      "algorithm": "AES-128"
+    },
+    "fields": ["ciphertexts", "keys", "plaintexts", "traces"],
+    "metadata": {
+      "format": "binary",
+      "algorithm": "AES-128",
+      "measurement": "electromagnetic",
+      "device": "ATMega-163",
+      "platform": "avr",
+      "countermeasures": [
+        "masking",
+        "shuffling"
+      ],
+      "key": "variable",
+      "n_samples": 1704402,
+      "year": 2014
+    }
+  },
+  "ches-ctf-2018-challenge-2": {
+    "display_name": "CHES CTF 2018 Challenge 2",
+    "aliases": [
+      "ches-ctf-2018-c2",
+      "ches-ctf-c2",
+      "ctf2018-challenge2",
+      "challenge2"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://zenodo.org/records/3733418/files/PinataAcqTask2.1_10k_upload.trs?download=1",
+        "filename": "PinataAcqTask2.1_10k_upload.trs",
+        "known_hash": "md5:0b39e0af295f34e4570a59ee8a27a6bf",
+        "archive": null
+      },
+      {
+        "url": "https://zenodo.org/records/3733418/files/PinataAcqTask2.2_10k_upload.trs?download=1",
+        "filename": "PinataAcqTask2.2_10k_upload.trs",
+        "known_hash": "md5:440949396e75054953342fd04ea36e06",
+        "archive": null
+      },
+      {
+        "url": "https://zenodo.org/records/3733418/files/PinataAcqTask2.3_10k_upload.trs?download=1",
+        "filename": "PinataAcqTask2.3_10k_upload.trs",
+        "known_hash": "md5:7bdc84397d2ce2384d1c080d77df83ea",
+        "archive": null
+      },
+      {
+        "url": "https://zenodo.org/records/3733418/files/PinataAcqTask2.4_10k_upload.trs?download=1",
+        "filename": "PinataAcqTask2.4_10k_upload.trs",
+        "known_hash": "md5:a308d86056aa65a8f7fad2cafd07e582",
+        "archive": null
+      },
+      {
+        "url": "https://zenodo.org/records/3733418/files/PinataAcqTask2.5_1k_NK_upload.trs?download=1",
+        "filename": "PinataAcqTask2.5_1k_NK_upload.trs",
+        "known_hash": "md5:0c5427765648c22a2e06e8b521a8fc2f",
+        "archive": null
+      },
+      {
+        "url": "https://zenodo.org/records/3733418/files/PinataAcqTask2.6_1k_NK_upload.trs?download=1",
+        "filename": "PinataAcqTask2.6_1k_NK_upload.trs",
+        "known_hash": "md5:f9c2ff381ed56ee30af2cc807ef24926",
+        "archive": null
+      }
+    ],
+    "homepage": "https://zenodo.org/records/3733418",
+    "paper": "https://chesctf.riscure.com/",
+    "license": "CC-BY-4.0",
+    "license_source": "https://zenodo.org/api/records/3733418",
+    "size_bytes": 27307225190,
+    "disk_bytes": 27307225190,
+    "notes": "CHES CTF 2018 Challenge 2 dataset collected on a Riscure Pinata platform. The benchmark comprises four 10k-trace acquisition files together with two additional 1k no-key acquisition files, distributed as six TRS files. In the two no-key files (PinataAcqTask2.5_1k_NK and 2.6_1k_NK) the key field is all zeros: the key is not provided, so do not compute labels from it (checked on the files, September 2026). Files 2.1 to 2.3 use a new key per trace and 2.4 one fixed key.",
+    "adapter": "trs",
+    "adapter_config": {
+      "chunked": true,
+      "chunk_glob": "*.trs",
+      "data_fields": {
+        "plaintexts": [
+          0,
+          16
+        ],
+        "ciphertexts": [
+          16,
+          32
+        ],
+        "keys": [
+          32,
+          48
+        ]
+      },
+      "algorithm": "AES-128"
+    },
+    "fields": ["ciphertexts", "keys", "plaintexts", "traces"],
+    "metadata": {
+      "format": "trs",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "32-bit STM microcontroller",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 650000,
+      "year": 2018
+    }
+  },
+  "aes-rd": {
+    "display_name": "AES Random Delays",
+    "aliases": [
+      "aes-random-delays",
+      "random-delays",
+      "randomdelays",
+      "kizhvatov-rd",
+      "aes-rd-dataset"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://media.githubusercontent.com/media/ikizhvatov/randomdelays-traces/4e13b46ff410db3fe75d40368f2bdcb99b8d3763/ctraces_fm16x4_2.mat",
+        "filename": "ctraces_fm16x4_2.mat",
+        "known_hash": "sha256:f23271e3a938ec44feda5d9b4d82373cca92af226a7edd78fe3a8cad624d4b65",
+        "archive": null
+      }
+    ],
+    "homepage": "https://github.com/ikizhvatov/randomdelays-traces",
+    "paper": "https://www.iacr.org/archive/ches2009/57470156/57470156.pdf",
+    "license": "CC-BY-NC-4.0",
+    "license_source": "https://github.com/ikizhvatov/randomdelays-traces/blob/4e13b46ff410db3fe75d40368f2bdcb99b8d3763/README.md",
+    "notes": "Power traces from an AES-128 implementation protected with random delay insertion on an Atmel ATmega16 microcontroller. The MATLAB file contains 50,000 traces of 3,500 samples each and is the dataset accompanying Kizhvatov's random-delay countermeasure studies.",
+    "size_bytes": 131316588,
+    "disk_bytes": 131316588,
+    "adapter": "matlab",
+    "adapter_config": {
+      "fields": {
+        "traces": "CompressedTraces",
+        "plaintexts": "plaintext"
+      },
+      "transpose_traces": true,
+      "metadata": {
+        "algorithm": "AES",
+        "fixed_key": "2b7e151628aed2a6abf7158809cf4f3c (not stored in file)"
+      }
+    },
+    "fields": ["plaintexts", "traces"],
+    "metadata": {
+      "format": "matlab",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "Atmel Atmega 16",
+      "platform": "avr",
+      "countermeasures": [
+        "random-delay"
+      ],
+      "key": "fixed",
+      "n_samples": 3500,
+      "year": 2011
+    }
+  },
+  "wolfssl-ed25519": {
+    "display_name": "WolfSSL Ed25519",
+    "aliases": [
+      "ed25519",
+      "wolfssl",
+      "wolfssl-eddsa",
+      "curve25519-wolfssl",
+      "eddsa-wolfssl"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://media.githubusercontent.com/media/leoweissbart/MachineLearningBasedSideChannelAttackonEdDSA/4454021f91d355e07ff184a0fcbe5427e0ec5409/databaseEdDSA.h5",
+        "filename": "databaseEdDSA.h5",
+        "known_hash": "sha256:3d2751397b3c5984fa4da97b6d1a656f30ce541cba86cac4ca104387ca7bb14f",
+        "archive": null
+      }
+    ],
+    "homepage": "https://github.com/leoweissbart/MachineLearningBasedSideChannelAttackonEdDSA",
+    "paper": "https://doi.org/10.1007/978-3-030-35869-3_8",
+    "license": "not stated",
+    "license_source": "https://api.github.com/repos/leoweissbart/MachineLearningBasedSideChannelAttackonEdDSA/license",
+    "notes": "Power side-channel dataset targeting the WolfSSL Ed25519 implementation (Curve25519) used in 'One Trace Is All It Takes: Machine Learning-Based Side-Channel Attack on EdDSA'. The repository distributes a single HDF5 file (databaseEdDSA.h5) containing the profiling dataset used in the paper.",
+    "size_bytes": 81924440,
+    "disk_bytes": 81924440,
+    "adapter": "hdf5",
+    "adapter_config": {
+      "splits": {
+        "profiling": "Profiling_traces",
+        "attack": "Attack_traces"
+      },
+      "default_split": "profiling",
+      "field_aliases": {},
+      "labels_dataset": "label",
+      "preferred_filename": "databaseEdDSA.h5",
+      "algorithm": "Ed25519"
+    },
+    "fields": {"profiling": ["labels", "traces"]},
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "Ed25519",
+      "measurement": "power",
+      "device": "Riscure Piñata 32-bit STM32F4",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "constant-time"
+      ],
+      "key": "variable",
+      "n_samples": 1000,
+      "year": 2019
+    }
+  },
+  "reassure-c25519-arithm": {
+    "display_name": "REASSURE Curve25519 Arithmetic",
+    "aliases": [
+      "reassure-c25519",
+      "reassure",
+      "curve25519-reassure",
+      "c25519-arithm",
+      "munacl-c25519"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://zenodo.org/records/3609789/files/REASSURE_c25519_arithm_6k%20%2B%20PatternExtract%20From%20100%20traces%20%2B%20StaticAlign.trs?download=1",
+        "filename": "REASSURE_c25519_arithm_6k + PatternExtract From 100 traces + StaticAlign.trs",
+        "known_hash": "md5:0d69153cae4f8566cae9fec632b6c839",
+        "archive": null
+      },
+      {
+        "url": "https://zenodo.org/records/3609789/files/REASSURE_c25519_arithm_6k%20%2B%20PatternExtract%20From%205997%20traces%20%2B%20StaticAlign.trs?download=1",
+        "filename": "REASSURE_c25519_arithm_6k + PatternExtract From 5997 traces + StaticAlign.trs",
+        "known_hash": "md5:2d5d52be5d040881e9170c053efb61f6",
+        "archive": null
+      },
+      {
+        "url": "https://zenodo.org/records/3609789/files/REASSURE_c25519_arithm_6k_100%20full%20traces.trs?download=1",
+        "filename": "REASSURE_c25519_arithm_6k_100 full traces.trs",
+        "known_hash": "md5:116286b914d31bc9060ba3e4f1df54b7",
+        "archive": null
+      }
+    ],
+    "homepage": "https://zenodo.org/records/3609789",
+    "paper": "https://eprint.iacr.org/2016/923",
+    "license": "CC-BY-4.0",
+    "license_source": "https://zenodo.org/api/records/3609789",
+    "size_bytes": 15610146014,
+    "disk_bytes": 15610146014,
+    "notes": "Electromagnetic side-channel traces of the μNaCl Curve25519 Montgomery ladder on a Riscure Piñata STM32F4 target. The implementation uses arithmetic-based conditional swap together with projective-coordinate re-randomization and scalar randomization. The collection contains an aligned 5,997-trace dataset, a 100-trace aligned subset, and the corresponding 100 full traces.",
+    "adapter": "trs",
+    "adapter_config": {
+      "preferred_filename": "REASSURE_c25519_arithm_6k + PatternExtract From 5997 traces + StaticAlign.trs",
+      "data_fields": {
+        "labels": [
+          0,
+          1
+        ]
+      },
+      "algorithm": "Curve25519",
+      "metadata": {
+        "note": "pattern-extracted aligned sub-traces (5500 samples); 1-byte label = Montgomery-ladder swap bit"
+      }
+    },
+    "fields": ["labels", "traces"],
+    "metadata": {
+      "format": "trs",
+      "algorithm": "Curve25519",
+      "measurement": "electromagnetic",
+      "platform": "arm-cortex-m",
+      "device": "Riscure Piñata STM32F4",
+      "countermeasures": [
+        "constant-time",
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 5500,
+      "year": 2016
+    }
+  },
+  "aes-ptv2-stm32f4": {
+    "display_name": "AES PTv2 STM32F4",
+    "aliases": [
+      "aes-ptv2-stm32",
+      "ptv2-stm32",
+      "stm32f4-ptv2",
+      "aes-ptv2-devices",
+      "ptv2-d1-d4"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://drive.usercontent.google.com/download?id=1xDY3-xJ2GodaY2-qgsKm1_LrH7GxkIcr&export=download&confirm=t",
+        "filename": "AES_PTv2_STM32F4_D1.h5",
+        "known_hash": "sha256:dea8b41bc2e74fc97d6008ec4469b4ee35bfbb15b225a72cad091755d12538fb",
+        "archive": "rar"
+      },
+      {
+        "url": "https://drive.usercontent.google.com/download?id=1FLNX9h957BgaR0Op1-ZR8X7xweTxqACm&export=download&confirm=t",
+        "filename": "AES_PTv2_STM32F4_D2.h5",
+        "known_hash": "sha256:43599c88ca6a12eec7690740eb8b707b417bcbbdbf96f6e1a4e6bba44a6e3c27",
+        "archive": "rar"
+      },
+      {
+        "url": "https://drive.usercontent.google.com/download?id=1MuJD3lMD-WJvMQZ70LHVJx50RlWu4CPD&export=download&confirm=t",
+        "filename": "AES_PTv2_STM32F4_D3.h5",
+        "known_hash": "sha256:50b44267a33f0cb536df4fd4cd47e02abb10c7d40f70cb466f4bad01224c5ccb",
+        "archive": "rar"
+      },
+      {
+        "url": "https://drive.usercontent.google.com/download?id=1e6YQGhTb7cYYeeUskMLiT75GAQW2mT0r&export=download&confirm=t",
+        "filename": "AES_PTv2_STM32F4_D4.h5",
+        "known_hash": "sha256:8a8ac5af91b8762329bb2f1d004fca5a6eb3f0df25777eb9c38db127be85b01b",
+        "archive": "rar"
+      }
+    ],
+    "homepage": "https://github.com/urioja/AESPTv2",
+    "paper": "https://github.com/urioja/AESPTv2",
+    "license": "not stated",
+    "license_source": "https://api.github.com/repos/urioja/AESPTv2/license",
+    "size_bytes": 15174686597,
+    "disk_bytes": 31616353733,
+    "notes": "AES PTv2 STM32F4 benchmark comprising four nominally identical devices (D1–D4). Each file contains the measurements acquired from one device. Downloads are hosted on Google Drive and are handled through the downloader's Google Drive support.",
+    "adapter": "hdf5",
+    "adapter_config": {
+      "splits": {
+        "profiling": "Unprotected/Profiling",
+        "attack": "Unprotected/Attack"
+      },
+      "default_split": "profiling",
+      "traces_dataset": "Traces",
+      "field_aliases": {
+        "plaintexts": ["plaintext"],
+        "keys": ["key"],
+        "masks": ["masks"]
+      },
+      "metadata_dataset": "MetaData",
+      "labels_dataset": "Labels",
+      "preferred_filename": "AES_PTv2_D1.h5",
+      "algorithm": "AES-128"
+    },
+    "fields": {"profiling": ["keys", "labels", "plaintexts", "traces"], "attack": ["keys", "labels", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "electromagnetic",
+      "device": "STM32F4-D1/2/3/4",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "variable",
+      "n_samples": 1260,
+      "year": 2021
+    }
+  },
+  "chameleon-base": {
+    "display_name": "Chameleon BASE",
+    "aliases": [
+      "chameleon",
+      "base",
+      "hardware-fab-base"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "huggingface",
+        "repo_id": "hardware-fab/Chameleon",
+        "repo_type": "dataset",
+        "revision": "1d24bc0f7dc1b7da5f138e0e4083c28e9b1ab52c",
+        "allow_patterns": "BASE/*"
+      }
+    ],
+    "homepage": "https://huggingface.co/datasets/hardware-fab/Chameleon",
+    "paper": "https://tches.iacr.org/index.php/TCHES/article/view/12221/12028",
+    "license": "CC-BY-4.0",
+    "license_source": "https://huggingface.co/api/datasets/hardware-fab/Chameleon",
+    "size_bytes": 68767106096,
+    "notes": "BASE subset of the Chameleon benchmark.",
+    "adapter": "chameleon",
+    "adapter_config": {
+      "chunked": true,
+      "chunk_glob": "chameleon_base_chunk_*.h5",
+      "algorithm": "AES-128"
+    },
+    "fields": ["keys", "plaintexts", "traces"],
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "32-bit RISC-V System-on-Chip",
+      "platform": "risc-v",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "partially-variable",
+      "n_samples": 134217550,
+      "year": 2025
+    }
+  },
+  "chameleon-dfs": {
+    "display_name": "Chameleon DFS",
+    "aliases": [
+      "hardware-fab-dfs"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "huggingface",
+        "repo_id": "hardware-fab/Chameleon",
+        "repo_type": "dataset",
+        "revision": "1d24bc0f7dc1b7da5f138e0e4083c28e9b1ab52c",
+        "allow_patterns": "DFS/*"
+      }
+    ],
+    "homepage": "https://huggingface.co/datasets/hardware-fab/Chameleon",
+    "paper": "https://tches.iacr.org/index.php/TCHES/article/view/12221/12028",
+    "license": "CC-BY-4.0",
+    "license_source": "https://huggingface.co/api/datasets/hardware-fab/Chameleon",
+    "size_bytes": 68831870576,
+    "notes": "DFS subset of the Chameleon benchmark.",
+    "adapter": "chameleon",
+    "adapter_config": {
+      "chunked": true,
+      "chunk_glob": "chameleon_dfs_chunk_*.h5",
+      "algorithm": "AES-128"
+    },
+    "fields": ["keys", "plaintexts", "traces"],
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "32-bit RISC-V System-on-Chip",
+      "platform": "risc-v",
+      "countermeasures": [
+        "clock-randomization"
+      ],
+      "key": "partially-variable",
+      "n_samples": 134217550,
+      "year": 2025
+    }
+  },
+  "chameleon-rd": {
+    "display_name": "Chameleon RD",
+    "aliases": [],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "huggingface",
+        "repo_id": "hardware-fab/Chameleon",
+        "repo_type": "dataset",
+        "revision": "1d24bc0f7dc1b7da5f138e0e4083c28e9b1ab52c",
+        "allow_patterns": "RD/*"
+      }
+    ],
+    "homepage": "https://huggingface.co/datasets/hardware-fab/Chameleon",
+    "paper": "https://tches.iacr.org/index.php/TCHES/article/view/12221/12028",
+    "license": "CC-BY-4.0",
+    "license_source": "https://huggingface.co/api/datasets/hardware-fab/Chameleon",
+    "size_bytes": 137530587608,
+    "notes": "RD subset of the Chameleon benchmark.",
+    "adapter": "chameleon",
+    "adapter_config": {
+      "chunked": true,
+      "chunk_glob": "chameleon_rd_chunk_*.h5",
+      "algorithm": "AES-128"
+    },
+    "fields": ["keys", "plaintexts", "traces"],
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "32-bit RISC-V System-on-Chip",
+      "platform": "risc-v",
+      "countermeasures": [
+        "random-delay"
+      ],
+      "key": "partially-variable",
+      "n_samples": 134217550,
+      "year": 2025
+    }
+  },
+  "chameleon-mrp": {
+    "display_name": "Chameleon MRP",
+    "aliases": [],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "huggingface",
+        "repo_id": "hardware-fab/Chameleon",
+        "repo_type": "dataset",
+        "revision": "1d24bc0f7dc1b7da5f138e0e4083c28e9b1ab52c",
+        "allow_patterns": "MRP/*"
+      }
+    ],
+    "homepage": "https://huggingface.co/datasets/hardware-fab/Chameleon",
+    "paper": "https://tches.iacr.org/index.php/TCHES/article/view/12221/12028",
+    "license": "CC-BY-4.0",
+    "license_source": "https://huggingface.co/api/datasets/hardware-fab/Chameleon",
+    "size_bytes": 137531062376,
+    "notes": "MRP subset of the Chameleon benchmark.",
+    "adapter": "chameleon",
+    "adapter_config": {
+      "chunked": true,
+      "chunk_glob": "chameleon_mrp_chunk_*.h5",
+      "algorithm": "AES-128"
+    },
+    "fields": ["keys", "plaintexts", "traces"],
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "32-bit RISC-V System-on-Chip",
+      "platform": "risc-v",
+      "countermeasures": [
+        "hiding"
+      ],
+      "key": "partially-variable",
+      "n_samples": 134217550,
+      "year": 2025
+    }
+  },
+  "chameleon-chf": {
+    "display_name": "Chameleon CHF",
+    "aliases": [],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "huggingface",
+        "repo_id": "hardware-fab/Chameleon",
+        "repo_type": "dataset",
+        "revision": "1d24bc0f7dc1b7da5f138e0e4083c28e9b1ab52c",
+        "allow_patterns": "CHF/*"
+      }
+    ],
+    "homepage": "https://huggingface.co/datasets/hardware-fab/Chameleon",
+    "paper": "https://tches.iacr.org/index.php/TCHES/article/view/12221/12028",
+    "license": "CC-BY-4.0",
+    "license_source": "https://huggingface.co/api/datasets/hardware-fab/Chameleon",
+    "size_bytes": 275054339264,
+    "notes": "CHF subset of the Chameleon benchmark.",
+    "adapter": "chameleon",
+    "adapter_config": {
+      "chunked": true,
+      "chunk_glob": "chameleon_chf_chunk_*.h5",
+      "algorithm": "AES-128"
+    },
+    "fields": ["keys", "plaintexts", "traces"],
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "32-bit RISC-V System-on-Chip",
+      "platform": "risc-v",
+      "countermeasures": [
+        "hiding"
+      ],
+      "key": "partially-variable",
+      "n_samples": 134217550,
+      "year": 2025
+    }
+  },
+  "smaesh-a7": {
+    "display_name": "SMAesH A7",
+    "aliases": [
+      "smaesh-a7-d2",
+      "a7",
+      "smaesh-cortex-a7"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://repository.tugraz.at/records/bk4fx-rbh46/files/smaesh-dataset-A7_d2-fk0.tar.zstd?download=1",
+        "filename": "smaesh-dataset-A7_d2-fk0.tar.zstd",
+        "known_hash": "md5:fcda440e21447a478fa64f2aeb8257f3",
+        "archive": "tar.zstd"
+      },
+      {
+        "url": "https://repository.tugraz.at/records/bk4fx-rbh46/files/smaesh-dataset-A7_d2-fk1.tar.zstd?download=1",
+        "filename": "smaesh-dataset-A7_d2-fk1.tar.zstd",
+        "known_hash": "md5:3595650d0981ee6b75cc3532dc026e6e",
+        "archive": "tar.zstd"
+      },
+      {
+        "url": "https://repository.tugraz.at/records/bk4fx-rbh46/files/smaesh-dataset-A7_d2-vk0.tar.zstd?download=1",
+        "filename": "smaesh-dataset-A7_d2-vk0.tar.zstd",
+        "known_hash": "md5:fecdaf03a1ce8361c065d6888af4ac6a",
+        "archive": "tar.zstd"
+      }
+    ],
+    "homepage": "https://repository.tugraz.at/records/bk4fx-rbh46",
+    "paper": "https://smaesh-challenge.simple-crypto.org/datasets.html",
+    "license": "ODC-By-1.0",
+    "license_source": "https://repository.tugraz.at/api/records/bk4fx-rbh46",
+    "notes": "SMAesH Artix-7 (A7) FPGA dataset with first-order masked AES (d2).",
+    "size_bytes": 316467291615,
+    "adapter": "npy-manifest",
+    "adapter_config": {
+      "field_map": {
+        "traces": "traces",
+        "plaintexts": "umsk_plaintext",
+        "keys": "umsk_key",
+        "masks": "msk_key"
+      },
+      "algorithm": "AES-128",
+      "default_split": "profiling",
+      "split_dirs": {
+        "profiling": "vk0",
+        "attack": "fk0"
+      },
+      "split_files": {
+        "profiling": ["*-vk0.tar.zstd"],
+        "attack": ["*-fk0.tar.zstd"]
+      },
+      "metadata": {
+        "note": "author split honored: vk0=profiling (variable key), fk0=attack (fixed key); fk1 is the held-out challenge set. the .tar.zstd archives are extracted automatically after download (or point path= at the parent of already extracted vk0/fk0 dirs)"
+      }
+    },
+    "metadata": {
+      "format": "numpy",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "Artix-7",
+      "platform": "fpga",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 4450,
+      "year": 2023
+    }
+  },
+  "smaesh-s6": {
+    "display_name": "SMAesH S6",
+    "aliases": [
+      "smaesh-s6-d2",
+      "s6",
+      "smaesh-spartan6",
+      "smaesh-spartan-6"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://repository.tugraz.at/records/bk4fx-rbh46/files/smaesh-dataset-S6_d2-fk0.tar.zstd?download=1",
+        "filename": "smaesh-dataset-S6_d2-fk0.tar.zstd",
+        "known_hash": "md5:e7299d6b1cbeab097f0d632dabb445a2",
+        "archive": "tar.zstd"
+      },
+      {
+        "url": "https://repository.tugraz.at/records/bk4fx-rbh46/files/smaesh-dataset-S6_d2-fk1.tar.zstd?download=1",
+        "filename": "smaesh-dataset-S6_d2-fk1.tar.zstd",
+        "known_hash": "md5:999d07e8bf4dd52c96c49b9f918767f2",
+        "archive": "tar.zstd"
+      },
+      {
+        "url": "https://repository.tugraz.at/records/bk4fx-rbh46/files/smaesh-dataset-S6_d2-vk0.tar.zstd?download=1",
+        "filename": "smaesh-dataset-S6_d2-vk0.tar.zstd",
+        "known_hash": "md5:4a7b5d3da2890897f37c1c6e51f98b85",
+        "archive": "tar.zstd"
+      }
+    ],
+    "homepage": "https://repository.tugraz.at/records/bk4fx-rbh46",
+    "paper": "https://smaesh-challenge.simple-crypto.org/datasets.html",
+    "license": "ODC-By-1.0",
+    "license_source": "https://repository.tugraz.at/api/records/bk4fx-rbh46",
+    "notes": "SMAesH Spartan-6 (S6) FPGA dataset with first-order masked AES (d2).",
+    "size_bytes": 289593111906,
+    "adapter": "npy-manifest",
+    "adapter_config": {
+      "field_map": {
+        "traces": "traces",
+        "plaintexts": "umsk_plaintext",
+        "keys": "umsk_key",
+        "masks": "msk_key"
+      },
+      "algorithm": "AES-128",
+      "default_split": "profiling",
+      "split_dirs": {
+        "profiling": "vk0",
+        "attack": "fk0"
+      },
+      "split_files": {
+        "profiling": ["*-vk0.tar.zstd"],
+        "attack": ["*-fk0.tar.zstd"]
+      },
+      "metadata": {
+        "note": "author split honored: vk0=profiling (variable key), fk0=attack (fixed key); fk1 is the held-out challenge set. the .tar.zstd archives are extracted automatically after download (or point path= at the parent of already extracted vk0/fk0 dirs)"
+      }
+    },
+    "metadata": {
+      "format": "numpy",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "Spartan-6",
+      "platform": "fpga",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 4400,
+      "year": 2023
+    }
+  },
+  "x-deepsca": {
+    "display_name": "X-DeepSCA",
+    "aliases": [
+      "xdeepsca",
+      "x-deep-sca",
+      "sparclab-x-deepsca",
+      "cross-device-atmega"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://github.com/SparcLab/X-DeepSCA/raw/master/mat_traces/cw308XGD2_10k_nov5_1447.zip",
+        "filename": "cw308XGD2_10k_nov5_1447.zip",
+        "known_hash": "sha256:5abb39407f5b8a4636e3cad90f7d86f8404c34d1b5a4881e41a126b5de0de7c0",
+        "archive": "zip"
+      },
+      {
+        "url": "https://github.com/SparcLab/X-DeepSCA/raw/master/mat_traces/cw308XGD3_10k_nov5_1643.zip",
+        "filename": "cw308XGD3_10k_nov5_1643.zip",
+        "known_hash": "sha256:7d8d33b483503d7ec4f1fb8fc4ad7ee2bec4efa4e7385a54b1abad41fdc877f0",
+        "archive": "zip"
+      },
+      {
+        "url": "https://github.com/SparcLab/X-DeepSCA/raw/master/mat_traces/cw308XGD4_10k_nov8_2228.zip",
+        "filename": "cw308XGD4_10k_nov8_2228.zip",
+        "known_hash": "sha256:737df2ea26a6a0c9e4b35cf9e9a73b403537cb2650f9d8413c9bb2805bb26c68",
+        "archive": "zip"
+      },
+      {
+        "url": "https://github.com/SparcLab/X-DeepSCA/raw/master/mat_traces/cw308XGD5_10k_nov9_1538.zip",
+        "filename": "cw308XGD5_10k_nov9_1538.zip",
+        "known_hash": "sha256:55bd88247b773e99069d23f04781c3b9c6e9599f66566f345c47b15e09be8ec0",
+        "archive": "zip"
+      },
+      {
+        "url": "https://github.com/SparcLab/X-DeepSCA/raw/master/mat_traces/cw308XGD6_10k_nov9_1559.zip",
+        "filename": "cw308XGD6_10k_nov9_1559.zip",
+        "known_hash": "sha256:b983cb8fd2136aa2a731c2347bcc4e31c0d00db4b20740de73ad7ee922dc9645",
+        "archive": "zip"
+      },
+      {
+        "url": "https://github.com/SparcLab/X-DeepSCA/raw/master/mat_traces/cw308XGD7_10k_nov22_2022.zip",
+        "filename": "cw308XGD7_10k_nov22_2022.zip",
+        "known_hash": "sha256:8a91037699eb7f0c86d6ba6ff45610a5f5cddeb6fe677676f47cc401a4fddd22",
+        "archive": "zip"
+      },
+      {
+        "url": "https://github.com/SparcLab/X-DeepSCA/raw/master/mat_traces/cw308XGD8_50k_nov14_1635.zip",
+        "filename": "cw308XGD8_50k_nov14_1635.zip",
+        "known_hash": "sha256:d3a001a0ad4c32ea5fd2aaa25a4f756c006038d94a44a881b11d7e98b4938790",
+        "archive": "zip"
+      },
+      {
+        "url": "https://github.com/SparcLab/X-DeepSCA/raw/master/mat_traces/cw308XGD9_nov14_2011.zip",
+        "filename": "cw308XGD9_nov14_2011.zip",
+        "known_hash": "sha256:54c00fbf525d6f086cc2ae7baa95d900d4125100820041282a4353ff0933c5f5",
+        "archive": "zip"
+      }
+    ],
+    "homepage": "https://github.com/SparcLab/X-DeepSCA",
+    "paper": "https://eprint.iacr.org/2019/818",
+    "license": "GPL-3.0",
+    "notes": "Power side-channel traces from multiple Atmega target devices for cross-device deep-learning side-channel analysis. The X-DeepSCA dataset provides measurements from devices GD2-GD9 and accompanies the DAC 2019 X-DeepSCA work on cross-device attacks against AES-128.",
+    "size_bytes": 409145342,
+    "disk_bytes": 4254267838,
+    "adapter": "matlab",
+    "adapter_config": {
+      "fields": {
+        "traces": "traces",
+        "plaintexts": "textin",
+        "keys": "key"
+      },
+      "transpose_traces": false,
+      "preferred_filename": "cw308XGD2_10k_nov5_1447.mat",
+      "metadata": {
+        "algorithm": "AES-128",
+        "scope": "single device GD2 per .mat"
+      }
+    },
+    "fields": ["keys", "plaintexts", "traces"],
+    "metadata": {
+      "format": "matlab",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "Atmega",
+      "platform": "avr",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "variable",
+      "n_samples": 3000,
+      "year": 2019
+    }
+  },
+  "re-encryption": {
+    "display_name": "Re-encryption",
+    "aliases": [
+      "reencryption-shake",
+      "re-encryption-shake",
+      "re-encryption-aes_a",
+      "re-encryption-aes_b",
+      "re-encryption-aes_c",
+      "re-encryption-aes_d",
+      "re-encryption-nrtp"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "gdrive",
+        "url": "https://drive.usercontent.google.com/download?id=17PSrk208qVx61QSO-jRBXMHunNNNGxVY&export=download&authuser=0",
+        "filename": "da_dataset.zip",
+        "known_hash": "sha256:bf0c4716f6d5a3ef2a92738e5ddf357805e8ff9b120440dd2e58b05bae75a881",
+        "archive": "zip-deflate64"
+      }
+    ],
+    "homepage": "https://github.com/ECSIS-lab/curse_of_re-encryption/tree/main/distinguish_attack",
+    "paper": "https://eprint.iacr.org/2021/849.pdf",
+    "license": "not stated (code folder: MIT)",
+    "license_source": "https://github.com/ECSIS-lab/curse_of_re-encryption/blob/main/distinguish_attack/LICENSE",
+    "size_bytes": 3028667308,
+    "disk_bytes": 15236670380,
+    "notes": "Re-encryption distinguishing dataset (Ueno et al., ePrint 2021/849). The default folder (aes_nonprotect_sw) holds power traces of an unprotected software AES-128 used as the PRF inside a Fujisaki-Okamoto re-encryption, on an STM32F415 (Cortex-M4). Other folders: SHAKE software, AES and masked AES hardware on a Kintex-7 FPGA (power), and masked AES software on an STM32F407 (EM). The task is fixed-vs-random plaintext distinguishing with a fixed key. The unprotected sets hold 50,000 traces with a predefined split and 1,000 features.",
+    "adapter": "two-class-npy",
+    "adapter_config": {
+      "base_dir": "aes_nonprotect_sw",
+      "default_split": "train",
+      "class0_file": "fixed.npy",
+      "class1_file": "random.npy",
+      "algorithm": "AES",
+      "metadata": {
+        "note": "distinguishing attack: label 0=fixed, 1=random; base_dir selects one of aes_masked_hw/sw, aes_nonprotect_hw/sw, keccak_nonprotect_sw, ntru_nonprotect_sw; split=train|test"
+      }
+    },
+    "fields": ["labels", "traces"],
+    "metadata": {
+      "format": "numpy",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "platform": "arm-cortex-m",
+      "device": "STM32F415 (default aes_nonprotect_sw); other subsets on Kintex-7 and STM32F407",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "fixed",
+      "year": 2021
+    }
+  },
+  "present-2021-randomized-clock": {
+    "display_name": "PRESENT 2021 Dataset 1",
+    "aliases": [
+      "present-2021",
+      "present-dataset-1"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "gdrive",
+        "url": "https://drive.google.com/file/d/1gYerTpnJF_u-BrP5ny0c6rcgbuKQlE4h/view",
+        "filename": "FPGA_PRESENT_RANDOMIZED_CLOCK.zip",
+        "known_hash": "sha256:465f957b48b4fbdc9f857c36b5745e97888a6c308ba594545646365bfedb0b3d",
+        "archive": "zip"
+      }
+    ],
+    "homepage": "https://github.com/Chair-for-Security-Engineering/DL-LA/tree/main/Traces",
+    "paper": "https://eprint.iacr.org/2019/505.pdf",
+    "license": "not stated (code repository: GPL-3.0)",
+    "license_source": "https://github.com/Chair-for-Security-Engineering/DL-LA/blob/main/LICENSE",
+    "size_bytes": 288038336,
+    "disk_bytes": 788138336,
+    "notes": "PRESENT power side-channel traces acquired from a Sakura-G target. One of two upstream Google Drive artifacts associated with the PRESENT 2021 datasets.",
+    "adapter": "raw-binary",
+    "adapter_config": {
+      "record": {
+        "filename": "Traces_1.dat",
+        "dtype": [
+          [
+            "trace",
+            "i1",
+            [
+              5000
+            ]
+          ],
+          [
+            "group",
+            "u1"
+          ]
+        ],
+        "fields": {
+          "traces": "trace",
+          "labels": "group"
+        }
+      },
+      "metadata": {
+        "algorithm": "PRESENT",
+        "label_note": "group 0=fixed 1=random"
+      }
+    },
+    "fields": ["labels", "traces"],
+    "metadata": {
+      "format": "binary",
+      "algorithm": "PRESENT",
+      "measurement": "power",
+      "device": "Sakura G",
+      "platform": "fpga",
+      "countermeasures": [
+        "clock-randomization",
+        "desynchronization"
+      ],
+      "key": "fixed",
+      "n_samples": 5000,
+      "year": 2021
+    }
+  },
+  "present-2021-ti-misaligned": {
+    "display_name": "PRESENT 2021 Dataset 2",
+    "aliases": [
+      "present-dataset-2"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "gdrive",
+        "url": "https://drive.google.com/file/d/1dWPx-dp9fKA9i0yZMf31ue7x74TYnNQa/view",
+        "filename": "FPGA_PRESENT_TI_MISALIGNED.zip",
+        "known_hash": "sha256:22d898ca26849534e3a9c645056e5fb056e0241b89492b5daefe1e843d39f539",
+        "archive": "zip-deflate64"
+      }
+    ],
+    "homepage": "https://github.com/Chair-for-Security-Engineering/DL-LA/tree/main/Traces",
+    "paper": "https://eprint.iacr.org/2019/505.pdf",
+    "license": "not stated (code repository: GPL-3.0)",
+    "license_source": "https://github.com/Chair-for-Security-Engineering/DL-LA/blob/main/LICENSE",
+    "size_bytes": 13058375616,
+    "disk_bytes": 38063375616,
+    "notes": "PRESENT power side-channel traces acquired from a Sakura-G target. One of two upstream Google Drive artifacts associated with the PRESENT 2021 datasets.",
+    "adapter": "raw-binary",
+    "adapter_config": {
+      "chunked": true,
+      "chunk_glob": "Traces_*.dat",
+      "record": {
+        "filename": "Traces_1.dat",
+        "dtype": [
+          [
+            "trace",
+            "i1",
+            [
+              5000
+            ]
+          ],
+          [
+            "group",
+            "u1"
+          ]
+        ],
+        "fields": {
+          "traces": "trace",
+          "labels": "group"
+        }
+      },
+      "metadata": {
+        "algorithm": "PRESENT",
+        "label_note": "group 0=fixed 1=random"
+      }
+    },
+    "fields": ["labels", "traces"],
+    "metadata": {
+      "format": "binary",
+      "algorithm": "PRESENT",
+      "measurement": "power",
+      "device": "Sakura G",
+      "platform": "fpga",
+      "countermeasures": [
+        "threshold-implementation",
+        "desynchronization"
+      ],
+      "key": "fixed",
+      "n_samples": 5000,
+      "year": 2021
+    }
+  },
+  "scaaml-ecc-gpam-cm0": {
+    "display_name": "SCAAML ECC GPAM CM0",
+    "aliases": [
+      "scaaml-ecc-cm0",
+      "gpam-cm0",
+      "ecc-gpam-cm0"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "gcs",
+        "url": "gs://scaaml-public/datasets/ECC/GPAM/K82F_ECC_CM0_ECC-FR256_CW308/"
+      }
+    ],
+    "homepage": "https://github.com/google/scaaml/tree/main/papers/datasets/ECC/GPAM",
+    "paper": "https://arxiv.org/abs/2306.07249",
+    "license": "CC-BY-4.0",
+    "license_source": "https://storage.googleapis.com/scaaml-public/datasets/ECC/GPAM/K82F_ECC_CM0_ECC-FR256_CW308/info.json",
+    "notes": "SCAAML GPAM CM0 ECC dataset captured from the NXP K82F cryptographic accelerator on a CW308 target.",
+    "size_bytes": 199300000000,
+    "adapter": "scaaml",
+    "adapter_config": {
+      "split_files": {
+        "train": [
+          "info.json",
+          "train/*"
+        ],
+        "test": [
+          "info.json",
+          "test/*"
+        ],
+        "holdout": [
+          "info.json",
+          "holdout/*"
+        ]
+      },
+      "traces_feature": "trace1",
+      "field_map": {
+        "keys": "k",
+        "labels": "k_bits"
+      },
+      "default_split": "train",
+      "algorithm": "ECC",
+      "metadata": {
+        "note": "point path at the SCAAML dataset dir (contains info.json); k=scalar bytes, k_bits=per-bit labels"
+      }
+    },
+    "fields": {"train": ["keys", "labels", "traces"], "test": ["keys", "labels", "traces"], "holdout": ["keys", "labels", "traces"]},
+    "metadata": {
+      "format": "other",
+      "algorithm": "ECC",
+      "measurement": "power",
+      "device": "CW308T-K82F",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "constant-time"
+      ],
+      "key": "variable",
+      "n_samples": 1620000,
+      "year": 2024
+    }
+  },
+  "scaaml-ecc-gpam-cm1": {
+    "display_name": "SCAAML ECC GPAM CM1",
+    "aliases": [
+      "scaaml-ecc-cm1",
+      "gpam-cm1",
+      "ecc-gpam-cm1"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "gcs",
+        "url": "gs://scaaml-public/datasets/ECC/GPAM/K82F_ECC_CM1_ECC-FR256_CW308/"
+      }
+    ],
+    "homepage": "https://github.com/google/scaaml/tree/main/papers/datasets/ECC/GPAM",
+    "paper": "https://arxiv.org/abs/2306.07249",
+    "license": "CC-BY-4.0",
+    "license_source": "https://storage.googleapis.com/scaaml-public/datasets/ECC/GPAM/K82F_ECC_CM1_ECC-FR256_CW308/info.json",
+    "notes": "SCAAML GPAM CM1 ECC dataset captured from the NXP K82F cryptographic accelerator on a CW308 target.",
+    "size_bytes": 1701400000000,
+    "adapter": "scaaml",
+    "adapter_config": {
+      "split_files": {
+        "train": [
+          "info.json",
+          "train/*"
+        ],
+        "test": [
+          "info.json",
+          "test/*"
+        ],
+        "holdout": [
+          "info.json",
+          "holdout/*"
+        ]
+      },
+      "traces_feature": "trace1",
+      "field_map": {
+        "keys": "k",
+        "labels": "k_bits"
+      },
+      "default_split": "train",
+      "algorithm": "ECC",
+      "metadata": {
+        "note": "point path at the SCAAML dataset dir (contains info.json); k=scalar bytes, k_bits=per-bit labels"
+      }
+    },
+    "fields": {"train": ["keys", "labels", "traces"], "test": ["keys", "labels", "traces"], "holdout": ["keys", "labels", "traces"]},
+    "metadata": {
+      "format": "other",
+      "algorithm": "ECC",
+      "measurement": "power",
+      "device": "CW308T-K82F",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 5000000,
+      "year": 2024
+    }
+  },
+  "scaaml-ecc-gpam-cm2": {
+    "display_name": "SCAAML ECC GPAM CM2",
+    "aliases": [
+      "scaaml-ecc-cm2",
+      "gpam-cm2",
+      "ecc-gpam-cm2"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "gcs",
+        "url": "gs://scaaml-public/datasets/ECC/GPAM/K82F_ECC_CM2_ECC-FR256_CW308/"
+      }
+    ],
+    "homepage": "https://github.com/google/scaaml/tree/main/papers/datasets/ECC/GPAM",
+    "paper": "https://arxiv.org/abs/2306.07249",
+    "license": "CC-BY-4.0",
+    "license_source": "https://storage.googleapis.com/scaaml-public/datasets/ECC/GPAM/K82F_ECC_CM2_ECC-FR256_CW308/info.json",
+    "notes": "SCAAML GPAM CM2 ECC dataset captured from the NXP K82F cryptographic accelerator on a CW308 target.",
+    "size_bytes": 2339300000000,
+    "adapter": "scaaml",
+    "adapter_config": {
+      "split_files": {
+        "train": [
+          "info.json",
+          "train/*"
+        ],
+        "test": [
+          "info.json",
+          "test/*"
+        ],
+        "holdout": [
+          "info.json",
+          "holdout/*"
+        ]
+      },
+      "traces_feature": "trace1",
+      "field_map": {
+        "keys": "k",
+        "labels": "k_bits"
+      },
+      "default_split": "train",
+      "algorithm": "ECC",
+      "metadata": {
+        "note": "point path at the SCAAML dataset dir (contains info.json); k=scalar bytes, k_bits=per-bit labels"
+      }
+    },
+    "fields": {"train": ["keys", "labels", "traces"], "test": ["keys", "labels", "traces"], "holdout": ["keys", "labels", "traces"]},
+    "metadata": {
+      "format": "other",
+      "algorithm": "ECC",
+      "measurement": "power",
+      "device": "CW308T-K82F",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 10000000,
+      "year": 2024
+    }
+  },
+  "scaaml-ecc-gpam-cm3": {
+    "display_name": "SCAAML ECC GPAM CM3",
+    "aliases": [
+      "scaaml-ecc-cm3",
+      "gpam-cm3",
+      "ecc-gpam-cm3"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "gcs",
+        "url": "gs://scaaml-public/datasets/ECC/GPAM/K82F_ECC_CM3_ECC-FR256_CW308/"
+      }
+    ],
+    "homepage": "https://github.com/google/scaaml/tree/main/papers/datasets/ECC/GPAM",
+    "paper": "https://arxiv.org/abs/2306.07249",
+    "license": "CC-BY-4.0",
+    "license_source": "https://storage.googleapis.com/scaaml-public/datasets/ECC/GPAM/K82F_ECC_CM3_ECC-FR256_CW308/info.json",
+    "notes": "SCAAML GPAM CM3 ECC dataset captured from the NXP K82F cryptographic accelerator on a CW308 target.",
+    "size_bytes": 4047200000000,
+    "adapter": "scaaml",
+    "adapter_config": {
+      "split_files": {
+        "train": [
+          "info.json",
+          "train/*"
+        ],
+        "test": [
+          "info.json",
+          "test/*"
+        ],
+        "holdout": [
+          "info.json",
+          "holdout/*"
+        ]
+      },
+      "traces_feature": "trace1",
+      "field_map": {
+        "keys": "k",
+        "labels": "k_bits"
+      },
+      "default_split": "train",
+      "algorithm": "ECC",
+      "metadata": {
+        "note": "point path at the SCAAML dataset dir (contains info.json); k=scalar bytes, k_bits=per-bit labels"
+      }
+    },
+    "fields": {"train": ["keys", "labels", "traces"], "test": ["keys", "labels", "traces"], "holdout": ["keys", "labels", "traces"]},
+    "metadata": {
+      "format": "other",
+      "algorithm": "ECC",
+      "measurement": "power",
+      "device": "CW308T-K82F",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 17500000,
+      "year": 2024
+    }
+  },
+  "dfs-desynch": {
+    "display_name": "DFS_DESYNCH",
+    "aliases": [
+      "dfs-desynchronization",
+      "dlata-dataset"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "huggingface",
+        "repo_id": "hardware-fab/DFS_DESYNCH",
+        "repo_type": "dataset",
+        "revision": "8a646f2e3872e2f7772d3622157ed08a51477b5c"
+      }
+    ],
+    "homepage": "https://huggingface.co/datasets/hardware-fab/DFS_DESYNCH",
+    "paper": "https://doi.org/10.1109/TC.2024.3477997",
+    "license": "CC-BY-4.0",
+    "notes": "Power side-channel dataset containing 256,000 highly desynchronized traces of an unprotected OpenSSL AES-128 software implementation running on a 32-bit RISC-V SoC implemented on an AMD Artix-7 FPGA. Dynamic Frequency Scaling randomly changes the operating frequency among 35, 40, 45, 50, 55 and 60 MHz. The dataset contains 128,000 profiling and 128,000 attack traces, each with 200,000 samples acquired at 125 MS/s with 12-bit resolution. Data are stored in HDF5 and partitioned into 32 chunks according to the first AES key byte: each chunk holds 8 keys (one per first-key-byte value), so 256 keys in total, in both splits. Each split also holds a 'labels' dataset that is not a class label but the clock-frequency schedule, records of (sample, frequency); it is not exposed as labels (checked on the file, October 2026). Compute labels from the keys and plaintexts.",
+    "size_bytes": 204900000000,
+    "adapter": "hdf5",
+    "adapter_config": {
+      "chunked": true,
+      "chunk_glob": "*.h5",
+      "splits": {
+        "profiling": "profiling",
+        "attack": "attack"
+      },
+      "default_split": "attack",
+      "field_aliases": {
+        "plaintexts": [
+          "plaintext"
+        ],
+        "keys": [
+          "key"
+        ]
+      },
+            "algorithm": "AES"
+    },
+    "fields": {"profiling": ["keys", "plaintexts", "traces"], "attack": ["keys", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "32-bit RISC-V System-on-Chip",
+      "platform": "risc-v",
+      "countermeasures": [
+        "clock-randomization"
+      ],
+      "key": "variable",
+      "n_samples": 200000,
+      "year": 2025
+    }
+  },
+  "ches-ctf-2020-spook-sw3": {
+    "display_name": "CHES CTF 2020 Spook SW3",
+    "aliases": [
+      "spook-sw3",
+      "ches2020-spook-sw3"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "dataverse",
+        "url": "https://dataverse.uclouvain.be",
+        "persistent_id": "doi:10.14428/DVN/W2SV5G",
+        "path_prefix": "sw3/"
+      }
+    ],
+    "homepage": "https://dataverse.uclouvain.be/dataset.xhtml?persistentId=doi:10.14428/DVN/W2SV5G",
+    "paper": null,
+    "license": "CC-BY-SA-4.0",
+    "license_source": "https://dataverse.uclouvain.be/api/datasets/:persistentId/?persistentId=doi:10.14428/DVN/W2SV5G",
+    "notes": "CHES CTF 2020 Spook SW3 software side-channel dataset. Contains 255 files totaling approximately 81.52 GiB, comprising five fixed-key subsets and one random-key subset.",
+    "size_bytes": 87531433492,
+    "adapter": "npz",
+    "adapter_config": {
+      "split_files": {
+        "profiling": [
+          "rkey_sw3_*.npz"
+        ],
+        "attack": [
+          "fkey_sw3_K0_*.npz"
+        ]
+      },
+      "chunked": true,
+      "chunk_glob": "rkey_sw3_*.npz",
+      "default_split": "profiling",
+      "splits": {
+        "profiling": { "chunk_glob": "rkey_sw3_*.npz" },
+        "attack": {
+          "chunk_glob": "fkey_sw3_K0_*.npz",
+          "layout": { "traces": "traces", "plaintexts": "nonces" },
+          "fixed_key": "d11a61da644e5d360eefa2fec96c1115"
+        }
+      },
+      "layout": {
+        "traces": "traces",
+        "plaintexts": "nonces",
+        "keys": "umsk_keys",
+        "masks": "msk_keys"
+      },
+      "algorithm": "Clyde-128",
+      "metadata": {
+        "scope": "random-key (variable-key) profiling set; nonce exposed as plaintexts (public input to Clyde-128). A full guessing-entropy attack needs the fixed-key set (traces+nonce only) as the test partition."
+      }
+    },
+    "fields": {"profiling": ["keys", "masks", "plaintexts", "traces"], "attack": ["keys", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "numpy",
+      "algorithm": "Clyde-128",
+      "measurement": "power",
+      "device": "hardware Sakura G board, software  STM32 F0 Cortex-M0 Discovery board",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 62500,
+      "year": 2020
+    }
+  },
+  "ches-ctf-2020-spook-sw4": {
+    "display_name": "CHES CTF 2020 Spook SW4",
+    "aliases": [
+      "spook-sw4",
+      "ches2020-spook-sw4"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "dataverse",
+        "url": "https://dataverse.uclouvain.be",
+        "persistent_id": "doi:10.14428/DVN/W2SV5G",
+        "path_prefix": "sw4/"
+      }
+    ],
+    "homepage": "https://dataverse.uclouvain.be/dataset.xhtml?persistentId=doi:10.14428/DVN/W2SV5G",
+    "paper": null,
+    "license": "CC-BY-SA-4.0",
+    "license_source": "https://dataverse.uclouvain.be/api/datasets/:persistentId/?persistentId=doi:10.14428/DVN/W2SV5G",
+    "notes": "CHES CTF 2020 Spook SW4 software side-channel dataset. Contains 255 files totaling approximately 108.68 GiB, comprising five fixed-key subsets and one random-key subset.",
+    "size_bytes": 116694261432,
+    "adapter": "npz",
+    "adapter_config": {
+      "split_files": {
+        "profiling": [
+          "rkey_sw4_*.npz"
+        ],
+        "attack": [
+          "fkey_sw4_K0_*.npz"
+        ]
+      },
+      "chunked": true,
+      "chunk_glob": "rkey_sw4_*.npz",
+      "default_split": "profiling",
+      "splits": {
+        "profiling": { "chunk_glob": "rkey_sw4_*.npz" },
+        "attack": {
+          "chunk_glob": "fkey_sw4_K0_*.npz",
+          "layout": { "traces": "traces", "plaintexts": "nonces" },
+          "fixed_key": "af4aa5048bb604203611f512058ba8ee"
+        }
+      },
+      "layout": {
+        "traces": "traces",
+        "plaintexts": "nonces",
+        "keys": "umsk_keys",
+        "masks": "msk_keys"
+      },
+      "algorithm": "Clyde-128",
+      "metadata": {
+        "scope": "random-key (variable-key) profiling set; nonce exposed as plaintexts (public input to Clyde-128). A full guessing-entropy attack needs the fixed-key set (traces+nonce only) as the test partition."
+      }
+    },
+    "fields": {"profiling": ["keys", "masks", "plaintexts", "traces"], "attack": ["keys", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "numpy",
+      "algorithm": "Clyde-128",
+      "measurement": "power",
+      "device": "hardware Sakura G board, software  STM32 F0 Cortex-M0 Discovery board",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 83333,
+      "year": 2020
+    }
+  },
+  "ches-ctf-2020-spook-sw6": {
+    "display_name": "CHES CTF 2020 Spook SW6",
+    "aliases": [
+      "spook-sw6",
+      "ches2020-spook-sw6"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "dataverse",
+        "url": "https://dataverse.uclouvain.be",
+        "persistent_id": "doi:10.14428/DVN/W2SV5G",
+        "path_prefix": "sw6/"
+      }
+    ],
+    "homepage": "https://dataverse.uclouvain.be/dataset.xhtml?persistentId=doi:10.14428/DVN/W2SV5G",
+    "paper": null,
+    "license": "CC-BY-SA-4.0",
+    "license_source": "https://dataverse.uclouvain.be/api/datasets/:persistentId/?persistentId=doi:10.14428/DVN/W2SV5G",
+    "notes": "CHES CTF 2020 Spook SW6 software side-channel dataset. Contains 255 files totaling approximately 203.76 GiB, comprising five fixed-key subsets and one random-key subset.",
+    "size_bytes": 218785634058,
+    "adapter": "npz",
+    "adapter_config": {
+      "split_files": {
+        "profiling": [
+          "rkey_sw6_*.npz"
+        ],
+        "attack": [
+          "fkey_sw6_K0_*.npz"
+        ]
+      },
+      "chunked": true,
+      "chunk_glob": "rkey_sw6_*.npz",
+      "default_split": "profiling",
+      "splits": {
+        "profiling": { "chunk_glob": "rkey_sw6_*.npz" },
+        "attack": {
+          "chunk_glob": "fkey_sw6_K0_*.npz",
+          "layout": { "traces": "traces", "plaintexts": "nonces" },
+          "fixed_key": "df223398789627d018fda6ae44dec3af"
+        }
+      },
+      "layout": {
+        "traces": "traces",
+        "plaintexts": "nonces",
+        "keys": "umsk_keys",
+        "masks": "msk_keys"
+      },
+      "algorithm": "Clyde-128",
+      "metadata": {
+        "scope": "random-key (variable-key) profiling set; nonce exposed as plaintexts (public input to Clyde-128). A full guessing-entropy attack needs the fixed-key set (traces+nonce only) as the test partition."
+      }
+    },
+    "fields": {"profiling": ["keys", "masks", "plaintexts", "traces"], "attack": ["keys", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "numpy",
+      "algorithm": "Clyde-128",
+      "measurement": "power",
+      "device": "hardware Sakura G board, software  STM32 F0 Cortex-M0 Discovery board",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 156250,
+      "year": 2020
+    }
+  },
+  "ches-ctf-2020-spook-sw8": {
+    "display_name": "CHES CTF 2020 Spook SW8",
+    "aliases": [
+      "spook-sw8",
+      "ches2020-spook-sw8"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "dataverse",
+        "url": "https://dataverse.uclouvain.be",
+        "persistent_id": "doi:10.14428/DVN/W2SV5G",
+        "path_prefix": "sw8/"
+      }
+    ],
+    "homepage": "https://dataverse.uclouvain.be/dataset.xhtml?persistentId=doi:10.14428/DVN/W2SV5G",
+    "paper": null,
+    "license": "CC-BY-SA-4.0",
+    "license_source": "https://dataverse.uclouvain.be/api/datasets/:persistentId/?persistentId=doi:10.14428/DVN/W2SV5G",
+    "notes": "CHES CTF 2020 Spook SW8 software side-channel dataset. Contains 255 files totaling approximately 285.26 GiB, comprising five fixed-key subsets and one random-key subset.",
+    "size_bytes": 306295592714,
+    "adapter": "npz",
+    "adapter_config": {
+      "split_files": {
+        "profiling": [
+          "rkey_sw8_*.npz"
+        ],
+        "attack": [
+          "fkey_sw8_K0_*.npz"
+        ]
+      },
+      "chunked": true,
+      "chunk_glob": "rkey_sw8_*.npz",
+      "default_split": "profiling",
+      "splits": {
+        "profiling": { "chunk_glob": "rkey_sw8_*.npz" },
+        "attack": {
+          "chunk_glob": "fkey_sw8_K0_*.npz",
+          "layout": { "traces": "traces", "plaintexts": "nonces" },
+          "fixed_key": "e9d201156b34669eb145bbd026b7e676"
+        }
+      },
+      "layout": {
+        "traces": "traces",
+        "plaintexts": "nonces",
+        "keys": "umsk_keys",
+        "masks": "msk_keys"
+      },
+      "algorithm": "Clyde-128",
+      "metadata": {
+        "scope": "random-key (variable-key) profiling set; nonce exposed as plaintexts (public input to Clyde-128). A full guessing-entropy attack needs the fixed-key set (traces+nonce only) as the test partition."
+      }
+    },
+    "fields": {"profiling": ["keys", "masks", "plaintexts", "traces"], "attack": ["keys", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "numpy",
+      "algorithm": "Clyde-128",
+      "measurement": "power",
+      "device": "hardware Sakura G board, software  STM32 F0 Cortex-M0 Discovery board",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 218750,
+      "year": 2020
+    }
+  },
+  "ches-ctf-2020-spook-hw2": {
+    "display_name": "CHES CTF 2020 Spook HW2",
+    "aliases": [
+      "spook-hw2",
+      "ches2020-spook-hw2"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "dataverse",
+        "url": "https://dataverse.uclouvain.be",
+        "persistent_id": "doi:10.14428/DVN/W2SV5G",
+        "path_prefix": "hw2/"
+      }
+    ],
+    "homepage": "https://dataverse.uclouvain.be/dataset.xhtml?persistentId=doi:10.14428/DVN/W2SV5G",
+    "paper": null,
+    "license": "CC-BY-SA-4.0",
+    "license_source": "https://dataverse.uclouvain.be/api/datasets/:persistentId/?persistentId=doi:10.14428/DVN/W2SV5G",
+    "notes": "CHES CTF 2020 Spook HW2 hardware side-channel dataset. Contains 575 files totaling approximately 459.70 GiB, comprising five fixed-key subsets and one random-key subset.",
+    "size_bytes": 493599116492,
+    "adapter": "npz",
+    "adapter_config": {
+      "split_files": {
+        "profiling": [
+          "rkey_hw2_*.npz"
+        ],
+        "attack": [
+          "fkey_hw2_K0_*.npz"
+        ]
+      },
+      "chunked": true,
+      "chunk_glob": "rkey_hw2_*.npz",
+      "default_split": "profiling",
+      "layout": {
+        "traces": "traces",
+        "plaintexts": "nonce",
+        "keys": "umsk_keys"
+      },
+      "uint32_fields": ["plaintexts", "keys"],
+      "splits": {
+        "profiling": { "chunk_glob": "rkey_hw2_*.npz" },
+        "attack": {
+          "chunk_glob": "fkey_hw2_K0_*.npz",
+          "layout": { "traces": "traces", "plaintexts": "nonce" },
+          "uint32_fields": ["plaintexts"],
+          "fixed_key": "90414ffdd837c411c5b06152ddaea7ff"
+        }
+      },
+      "algorithm": "Clyde-128",
+      "metadata": {
+        "scope": "random-key (variable-key) profiling set; nonce exposed as plaintexts (public input to Clyde-128). A full guessing-entropy attack needs the fixed-key set (traces+nonce only) as the test partition."
+      }
+    },
+    "fields": {"profiling": ["keys", "plaintexts", "traces"], "attack": ["keys", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "numpy",
+      "algorithm": "Clyde-128",
+      "measurement": "power",
+      "device": "hardware Sakura G board, software  STM32 F0 Cortex-M0 Discovery board",
+      "platform": "fpga",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 7000,
+      "year": 2020
+    }
+  },
+  "ches-ctf-2020-spook-hw3": {
+    "display_name": "CHES CTF 2020 Spook HW3",
+    "aliases": [
+      "spook-hw3",
+      "ches2020-spook-hw3"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "dataverse",
+        "url": "https://dataverse.uclouvain.be",
+        "persistent_id": "doi:10.14428/DVN/W2SV5G",
+        "path_prefix": "hw3/"
+      }
+    ],
+    "homepage": "https://dataverse.uclouvain.be/dataset.xhtml?persistentId=doi:10.14428/DVN/W2SV5G",
+    "paper": null,
+    "license": "CC-BY-SA-4.0",
+    "license_source": "https://dataverse.uclouvain.be/api/datasets/:persistentId/?persistentId=doi:10.14428/DVN/W2SV5G",
+    "notes": "CHES CTF 2020 Spook HW3 hardware side-channel dataset. Contains 575 files totaling approximately 460.04 GiB, comprising five fixed-key subsets and one random-key subset.",
+    "size_bytes": 493964188712,
+    "adapter": "npz",
+    "adapter_config": {
+      "split_files": {
+        "profiling": [
+          "rkey_hw3_*.npz"
+        ],
+        "attack": [
+          "fkey_hw3_K0_*.npz"
+        ]
+      },
+      "chunked": true,
+      "chunk_glob": "rkey_hw3_*.npz",
+      "default_split": "profiling",
+      "layout": {
+        "traces": "traces",
+        "plaintexts": "nonce",
+        "keys": "umsk_keys"
+      },
+      "uint32_fields": ["plaintexts", "keys"],
+      "splits": {
+        "profiling": { "chunk_glob": "rkey_hw3_*.npz" },
+        "attack": {
+          "chunk_glob": "fkey_hw3_K0_*.npz",
+          "layout": { "traces": "traces", "plaintexts": "nonce" },
+          "uint32_fields": ["plaintexts"],
+          "fixed_key": "384aaf52d1a6c879e2b51432c0cfbc89"
+        }
+      },
+      "algorithm": "Clyde-128",
+      "metadata": {
+        "scope": "random-key (variable-key) profiling set; nonce exposed as plaintexts (public input to Clyde-128). A full guessing-entropy attack needs the fixed-key set (traces+nonce only) as the test partition."
+      }
+    },
+    "fields": {"profiling": ["keys", "plaintexts", "traces"], "attack": ["keys", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "numpy",
+      "algorithm": "Clyde-128",
+      "measurement": "power",
+      "device": "hardware Sakura G board, software  STM32 F0 Cortex-M0 Discovery board",
+      "platform": "fpga",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 7000,
+      "year": 2020
+    }
+  },
+  "ches-ctf-2020-spook-hw4": {
+    "display_name": "CHES CTF 2020 Spook HW4",
+    "aliases": [
+      "spook-hw4",
+      "ches2020-spook-hw4"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "dataverse",
+        "url": "https://dataverse.uclouvain.be",
+        "persistent_id": "doi:10.14428/DVN/W2SV5G",
+        "path_prefix": "hw4/"
+      }
+    ],
+    "homepage": "https://dataverse.uclouvain.be/dataset.xhtml?persistentId=doi:10.14428/DVN/W2SV5G",
+    "paper": null,
+    "license": "CC-BY-SA-4.0",
+    "license_source": "https://dataverse.uclouvain.be/api/datasets/:persistentId/?persistentId=doi:10.14428/DVN/W2SV5G",
+    "notes": "CHES CTF 2020 Spook HW4 hardware side-channel dataset. Contains 575 files totaling approximately 460.33 GiB, comprising five fixed-key subsets and one random-key subset.",
+    "size_bytes": 494275573841,
+    "adapter": "npz",
+    "adapter_config": {
+      "split_files": {
+        "profiling": [
+          "rkey_hw4_*.npz"
+        ],
+        "attack": [
+          "fkey_hw4_K0_*.npz"
+        ]
+      },
+      "chunked": true,
+      "chunk_glob": "rkey_hw4_*.npz",
+      "default_split": "profiling",
+      "layout": {
+        "traces": "traces",
+        "plaintexts": "nonce",
+        "keys": "umsk_keys"
+      },
+      "uint32_fields": ["plaintexts", "keys"],
+      "splits": {
+        "profiling": { "chunk_glob": "rkey_hw4_*.npz" },
+        "attack": {
+          "chunk_glob": "fkey_hw4_K0_*.npz",
+          "layout": { "traces": "traces", "plaintexts": "nonce" },
+          "uint32_fields": ["plaintexts"],
+          "fixed_key": "aa3c6f199fabc79b938f23e5150586e2"
+        }
+      },
+      "algorithm": "Clyde-128",
+      "metadata": {
+        "scope": "random-key (variable-key) profiling set; nonce exposed as plaintexts (public input to Clyde-128). A full guessing-entropy attack needs the fixed-key set (traces+nonce only) as the test partition."
+      }
+    },
+    "fields": {"profiling": ["keys", "plaintexts", "traces"], "attack": ["keys", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "numpy",
+      "algorithm": "Clyde-128",
+      "measurement": "power",
+      "device": "hardware Sakura G board, software  STM32 F0 Cortex-M0 Discovery board",
+      "platform": "fpga",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 7000,
+      "year": 2020
+    }
+  },
+  "dtds-dilithium2": {
+    "display_name": "DTDS Dilithium2",
+    "aliases": [
+      "dtds-2",
+      "dilithium2-dtds",
+      "dilithium2-power",
+      "dilithium2-sca"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "http",
+        "url": "https://download.scidb.cn/download?fileId=3717f3634fc35763d17257227d11dfd7&path=/V2/Dilithium2.zip&fileName=Dilithium2.zip",
+        "filename": "Dilithium2.zip",
+        "known_hash": "md5:f0fcacfed995d90d0dc433cb22760f6f",
+        "archive": "zip"
+      }
+    ],
+    "homepage": "https://www.scidb.cn/en/detail?dataSetId=aa3512fdbc294719af4663757fc28468",
+    "paper": "https://doi.org/10.11999/JEIT250048",
+    "license": "CC-BY-4.0",
+    "notes": "Dilithium2 subset of DTDS: Dilithium Dataset for Power Analysis. 12 chunks x 5000 = 60,000 signing traces; per chunk polyz_unpack_traces.npy is (5000, 20000) int16 and polyz_unpack_y.npy is (5000, 4, 256) int32 = the masking polynomial y (4 polys x 256 coeffs, values in [-(gamma1-1), gamma1], gamma1=2^17). Confirmed on the real file: each 20000-sample trace covers polyz_unpack of polynomial 0 only (its 256 coefficients, ~75 samples each; polys 1-3 do not leak in these traces). key/pk/msg live in mate.req, not exposed as a field.",
+    "size_bytes": 1510102323,
+    "disk_bytes": 4925474785,
+    "adapter": "npy",
+    "adapter_config": {
+      "chunked": true,
+      "layout": {
+        "traces": "polyz_unpack_traces.npy",
+        "labels": "polyz_unpack_y.npy"
+      },
+      "algorithm": "Dilithium",
+      "metadata": {
+        "note": "key material (sk/pk/msg) is in mate.req, not exposed as a field"
+      }
+    },
+    "fields": ["labels", "traces"],
+    "metadata": {
+      "format": "numpy",
+      "algorithm": "Dilithium",
+      "measurement": "power",
+      "device": "Cortex M4",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "variable",
+      "n_samples": 20000,
+      "year": 2025
+    }
+  },
+  "dtds-dilithium3": {
+    "display_name": "DTDS Dilithium3",
+    "aliases": [
+      "dtds-3",
+      "dilithium3-dtds",
+      "dilithium3-power",
+      "dilithium3-sca"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "http",
+        "url": "https://download.scidb.cn/download?fileId=b221c230cc676debf001e651ed7611de&path=/V2/Dilithium3.zip&fileName=Dilithium3.zip",
+        "filename": "Dilithium3.zip",
+        "known_hash": "md5:806ad8be88cfd3967ce05c2658595b6a",
+        "archive": "zip"
+      }
+    ],
+    "homepage": "https://www.scidb.cn/en/detail?dataSetId=aa3512fdbc294719af4663757fc28468",
+    "paper": "https://doi.org/10.11999/JEIT250048",
+    "license": "CC-BY-4.0",
+    "notes": "Dilithium3 subset of DTDS: Dilithium Dataset for Power Analysis. DTDS contains power traces, corresponding metadata, and sensitive intermediate values for profiled side-channel analysis of Dilithium.",
+    "size_bytes": 2277165684,
+    "disk_bytes": 7432175472,
+    "adapter": "npy",
+    "adapter_config": {
+      "chunked": true,
+      "layout": {
+        "traces": "polyz_unpack_traces.npy",
+        "labels": "polyvecl_uniform_gamma1_y.npy"
+      },
+      "field_subdirs": {
+        "traces": "Traces",
+        "labels": "Median"
+      },
+      "algorithm": "Dilithium",
+      "metadata": {
+        "note": "Dilithium3/5 use a nested layout: traces under 3_Data/Traces/NNN, labels (polyvecl_uniform_gamma1_y) under 3_Data/Median/NNN; key material (mate.req) under 3_Data/Sign is not exposed."
+      }
+    },
+    "fields": ["labels", "traces"],
+    "metadata": {
+      "format": "numpy",
+      "algorithm": "Dilithium",
+      "measurement": "power",
+      "device": "Cortex M4",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "variable",
+      "n_samples": 31000,
+      "year": 2025
+    }
+  },
+  "dtds-dilithium5": {
+    "display_name": "DTDS Dilithium5",
+    "aliases": [
+      "dtds-5",
+      "dilithium5-dtds",
+      "dilithium5-power",
+      "dilithium5-sca"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "backend": "http",
+        "url": "https://download.scidb.cn/download?fileId=b53314e0e84f15aac3abaef11fd03dda&path=/V2/Dilithium5.zip&fileName=Dilithium5.zip",
+        "filename": "Dilithium5.zip",
+        "known_hash": "md5:83b02accc6a3e25b3cc05ce290fa09b3",
+        "archive": "zip"
+      }
+    ],
+    "homepage": "https://www.scidb.cn/en/detail?dataSetId=aa3512fdbc294719af4663757fc28468",
+    "paper": "https://doi.org/10.11999/JEIT250048",
+    "license": "CC-BY-4.0",
+    "notes": "Dilithium5 subset of DTDS: Dilithium Dataset for Power Analysis. DTDS contains power traces, corresponding metadata, and sensitive intermediate values for profiled side-channel analysis of Dilithium.",
+    "size_bytes": 2723637514,
+    "disk_bytes": 8938247302,
+    "adapter": "npy",
+    "adapter_config": {
+      "chunked": true,
+      "layout": {
+        "traces": "polyz_unpack_traces.npy",
+        "labels": "polyvecl_uniform_gamma1_y.npy"
+      },
+      "field_subdirs": {
+        "traces": "Traces",
+        "labels": "Median"
+      },
+      "algorithm": "Dilithium",
+      "metadata": {
+        "note": "Dilithium3/5 use a nested layout: traces under 3_Data/Traces/NNN, labels (polyvecl_uniform_gamma1_y) under 3_Data/Median/NNN; key material (mate.req) under 3_Data/Sign is not exposed."
+      }
+    },
+    "fields": ["labels", "traces"],
+    "metadata": {
+      "format": "numpy",
+      "algorithm": "Dilithium",
+      "measurement": "power",
+      "device": "Cortex M4",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "variable",
+      "n_samples": 36000,
+      "year": 2025
+    }
+  },
+  "ascadv": {
+    "display_name": "ASCAD ATMega variable key",
+    "aliases": [
+      "ascad-variable",
+      "ascad-v",
+      "ascad-variable-key",
+      "ascadv-sync"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://static.data.gouv.fr/resources/ascad-atmega-8515-variable-key/20190903-083349/ascad-variable.h5",
+        "filename": "ascad-variable.h5",
+        "known_hash": "sha1:ddc775ddd058c36eeb5191fad95caa42d373a5fb",
+        "archive": null
+      }
+    ],
+    "homepage": "https://github.com/ANSSI-FR/ASCAD/tree/master/ATMEGA_AES_v1/ATM_AES_v1_variable_key",
+    "paper": "https://eprint.iacr.org/2018/053",
+    "license": "not stated (code repository: BSD)",
+    "license_source": "https://www.data.gouv.fr/api/1/datasets/5d0333126f444137a806c08c/",
+    "notes": "ASCAD variable-key (ATMega8515) synchronized extracted traces in the ASCAD HDF5 layout (Profiling_traces/Attack_traces + metadata plaintext/key/masks); the key varies per trace.",
+    "size_bytes": 438606904,
+    "disk_bytes": 438606904,
+    "fields": ["keys", "masks", "plaintexts", "traces"],
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "ATMEGA8515",
+      "platform": "avr",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 1400,
+      "year": 2018
+    },
+    "adapter": "ascad"
+  },
+  "ascadv-desync50": {
+    "display_name": "ASCAD ATMega variable key (desync=50)",
+    "aliases": [
+      "ascad-variable-desync50",
+      "ascadv-d50"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://static.data.gouv.fr/resources/ascad-atmega-8515-variable-key/20190903-084119/ascad-variable-desync50.h5",
+        "filename": "ascad-variable-desync50.h5",
+        "known_hash": "sha1:89df73e8efe8c814a9b704b28d40860488c1601b",
+        "archive": null
+      }
+    ],
+    "homepage": "https://github.com/ANSSI-FR/ASCAD/tree/master/ATMEGA_AES_v1/ATM_AES_v1_variable_key",
+    "paper": "https://eprint.iacr.org/2018/053",
+    "license": "not stated (code repository: BSD)",
+    "license_source": "https://www.data.gouv.fr/api/1/datasets/5d0333126f444137a806c08c/",
+    "notes": "ASCAD variable-key extracted traces with a maximum desynchronization of 50 samples.",
+    "size_bytes": 438606904,
+    "disk_bytes": 438606904,
+    "fields": ["keys", "masks", "plaintexts", "traces"],
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "ATMEGA8515",
+      "platform": "avr",
+      "countermeasures": [
+        "desynchronization",
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 1400,
+      "year": 2018
+    },
+    "adapter": "ascad"
+  },
+  "ascadv-desync100": {
+    "display_name": "ASCAD ATMega variable key (desync=100)",
+    "aliases": [
+      "ascad-variable-desync100",
+      "ascadv-d100"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://static.data.gouv.fr/resources/ascad-atmega-8515-variable-key/20190903-084306/ascad-variable-desync100.h5",
+        "filename": "ascad-variable-desync100.h5",
+        "known_hash": "sha1:28827c055d7242cbb97afab63a27f0b94fe7f9e8",
+        "archive": null
+      }
+    ],
+    "homepage": "https://github.com/ANSSI-FR/ASCAD/tree/master/ATMEGA_AES_v1/ATM_AES_v1_variable_key",
+    "paper": "https://eprint.iacr.org/2018/053",
+    "license": "not stated (code repository: BSD)",
+    "license_source": "https://www.data.gouv.fr/api/1/datasets/5d0333126f444137a806c08c/",
+    "notes": "ASCAD variable-key extracted traces with a maximum desynchronization of 100 samples.",
+    "size_bytes": 438606904,
+    "disk_bytes": 438606904,
+    "fields": ["keys", "masks", "plaintexts", "traces"],
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "ATMEGA8515",
+      "platform": "avr",
+      "countermeasures": [
+        "desynchronization",
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 1400,
+      "year": 2018
+    },
+    "adapter": "ascad"
+  },
+  "ascadv-raw": {
+    "display_name": "ASCAD ATMega variable key (raw traces)",
+    "aliases": [
+      "ascad-variable-raw",
+      "atmega8515-raw-traces",
+      "ascadv2r-atmega"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://static.data.gouv.fr/resources/ascad-atmega-8515-variable-key/20190730-071646/atmega8515-raw-traces.h5",
+        "filename": "atmega8515-raw-traces.h5",
+        "known_hash": "sha1:dff7fa9c0e4658fce6a1a4987e96009df4fa1aff",
+        "archive": null
+      }
+    ],
+    "homepage": "https://github.com/ANSSI-FR/ASCAD/tree/master/ATMEGA_AES_v1/ATM_AES_v1_variable_key",
+    "paper": "https://eprint.iacr.org/2018/053",
+    "license": "not stated (code repository: BSD)",
+    "license_source": "https://www.data.gouv.fr/api/1/datasets/5d0333126f444137a806c08c/",
+    "notes": "ASCAD variable-key raw acquisition (~75 GB): root-level 'traces' plus a compound 'metadata' record (plaintext/key/masks). No pre-extracted window or profiling/attack split. The file holds 300,001 records of 250,000 samples; the last one (index 300000) is all zeros, trace and metadata (checked on the file, September 2026), so drop it before use, as for the ASCADv2 raw files.",
+    "size_bytes": 75265497280,
+    "fields": ["keys", "masks", "plaintexts", "traces"],
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "platform": "avr",
+      "device": "ATMega8515",
+      "countermeasures": [
+        "masking"
+      ],
+      "n_samples": 250000,
+      "key": "variable",
+      "year": 2018
+    },
+    "adapter": "hdf5",
+    "adapter_config": {
+      "splits": {
+        "all": "/"
+      },
+      "default_split": "all",
+      "traces_dataset": "traces",
+      "field_aliases": {
+        "plaintexts": [
+          "plaintext"
+        ],
+        "keys": [
+          "key"
+        ],
+        "masks": [
+          "masks"
+        ]
+      },
+      "algorithm": "AES"
+    }
+  },
+  "ascadv2": {
+    "display_name": "ASCADv2 STM32 (affine-masked AES)",
+    "aliases": [
+      "ascad-v2",
+      "ascad-stm32-v2",
+      "stm32-aes-v2"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://object.files.data.gouv.fr/anssi/ascadv2/ascadv2-extracted.h5",
+        "filename": "ascadv2-extracted.h5",
+        "known_hash": "sha1:8de295c8c18d033b13c03474189c0976a49ca993",
+        "archive": null
+      }
+    ],
+    "homepage": "https://github.com/ANSSI-FR/ASCAD/tree/master/STM32_AES_v2",
+    "paper": "https://eprint.iacr.org/2021/592",
+    "license": "Licence Ouverte 1.0 (code repository: BSD)",
+    "license_source": "https://www.data.gouv.fr/api/1/datasets/5f86e69087bfce2a36bef1c4/",
+    "notes": "ASCADv2: affine-masked AES-128 on an STM32 (ARM Cortex-M4). Extracted ASCAD-style HDF5 (Profiling_traces/Attack_traces + metadata; richer mask fields). Auto-downloaded (7.7 GB), verified against the authoritative ANSSI sha1 published at object.files.data.gouv.fr/anssi/ascadv2/sha1.txt. WARNING: per the ANSSI notice, profiling traces 99999/199999/299999/399999/499999 are zeroed by an acquisition issue (the attack part is clean) - drop those before training to avoid bias. Eight raw acquisition files (ascadv2-stm32-conso-raw-traces1..8.h5) are the separate ascadv2r entry. Adapter mapping is ASCAD-format, checked on the real file (September 2026).",
+    "size_bytes": 7713246656,
+    "disk_bytes": 7713246656,
+    "fields": ["keys", "masks", "plaintexts", "traces"],
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "device": "STM32 Cortex M4",
+      "platform": "arm-cortex-m",
+      "countermeasures": [
+        "affine-masking",
+        "shuffling"
+      ],
+      "key": "variable",
+      "n_samples": 15000,
+      "year": 2021
+    },
+    "adapter": "ascad"
+  },
+  "aes-ptv2-pinata-ms1": {
+    "display_name": "AES PTv2 Piñata (masked MS1)",
+    "aliases": [
+      "ptv2-pinata-ms1"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://drive.usercontent.google.com/download?id=1n8KQuq-giq2ZJvCLzBL_L-2zlq-nDk-q&export=download&confirm=t",
+        "filename": "AES_PTv2_Pinata.rar",
+        "known_hash": "sha256:0a6e28cc1703be958d4803bc8e94980184445132bb75791208202aaf13f25631",
+        "archive": "rar"
+      }
+    ],
+    "homepage": "https://github.com/urioja/AESPTv2",
+    "paper": "https://github.com/urioja/AESPTv2",
+    "license": "not stated",
+    "license_source": "https://api.github.com/repos/urioja/AESPTv2/license",
+    "size_bytes": 2354398332,
+    "disk_bytes": 6494815116,
+    "notes": "AES-PTv2 Piñata, masking scheme MS1 (same .h5 as the unprotected Piñata set; loads the MS1 implementation groups).",
+    "fields": {"profiling": ["keys", "labels", "masks", "plaintexts", "traces"], "attack": ["keys", "labels", "masks", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "platform": "arm-cortex-m",
+      "device": "Riscure Piñata STM32F4",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 1500,
+      "year": 2021
+    },
+    "adapter": "hdf5",
+    "adapter_config": {
+      "splits": {
+        "profiling": "MS1/Profiling",
+        "attack": "MS1/Attack"
+      },
+      "default_split": "profiling",
+      "traces_dataset": "Traces",
+      "field_aliases": {
+        "plaintexts": ["plaintext"],
+        "keys": ["key"],
+        "masks": ["masks"]
+      },
+      "metadata_dataset": "MetaData",
+      "labels_dataset": "Labels",
+      "algorithm": "AES-128",
+      "preferred_filename": "AES_PTv2_Pinata.h5"
+    }
+  },
+  "aes-ptv2-pinata-ms2": {
+    "display_name": "AES PTv2 Piñata (masked MS2)",
+    "aliases": [
+      "ptv2-pinata-ms2"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://drive.usercontent.google.com/download?id=1n8KQuq-giq2ZJvCLzBL_L-2zlq-nDk-q&export=download&confirm=t",
+        "filename": "AES_PTv2_Pinata.rar",
+        "known_hash": "sha256:0a6e28cc1703be958d4803bc8e94980184445132bb75791208202aaf13f25631",
+        "archive": "rar"
+      }
+    ],
+    "homepage": "https://github.com/urioja/AESPTv2",
+    "paper": "https://github.com/urioja/AESPTv2",
+    "license": "not stated",
+    "license_source": "https://api.github.com/repos/urioja/AESPTv2/license",
+    "size_bytes": 2354398332,
+    "disk_bytes": 6494815116,
+    "notes": "AES-PTv2 Piñata, masking scheme MS2 (same .h5 as the unprotected Piñata set; loads the MS2 implementation groups).",
+    "fields": {"profiling": ["keys", "labels", "masks", "plaintexts", "traces"], "attack": ["keys", "labels", "masks", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "platform": "arm-cortex-m",
+      "device": "Riscure Piñata STM32F4",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 1800,
+      "year": 2021
+    },
+    "adapter": "hdf5",
+    "adapter_config": {
+      "splits": {
+        "profiling": "MS2/Profiling",
+        "attack": "MS2/Attack"
+      },
+      "default_split": "profiling",
+      "traces_dataset": "Traces",
+      "field_aliases": {
+        "plaintexts": ["plaintext"],
+        "keys": ["key"],
+        "masks": ["masks"]
+      },
+      "metadata_dataset": "MetaData",
+      "labels_dataset": "Labels",
+      "algorithm": "AES-128",
+      "preferred_filename": "AES_PTv2_Pinata.h5"
+    }
+  },
+  "aes-ptv2-stm32f4-ms1": {
+    "display_name": "AES PTv2 STM32F4 (masked MS1)",
+    "aliases": [
+      "ptv2-stm32-ms1"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://drive.usercontent.google.com/download?id=1xDY3-xJ2GodaY2-qgsKm1_LrH7GxkIcr&export=download&confirm=t",
+        "filename": "AES_PTv2_STM32F4_D1.h5",
+        "known_hash": "sha256:dea8b41bc2e74fc97d6008ec4469b4ee35bfbb15b225a72cad091755d12538fb",
+        "archive": "rar"
+      },
+      {
+        "url": "https://drive.usercontent.google.com/download?id=1FLNX9h957BgaR0Op1-ZR8X7xweTxqACm&export=download&confirm=t",
+        "filename": "AES_PTv2_STM32F4_D2.h5",
+        "known_hash": "sha256:43599c88ca6a12eec7690740eb8b707b417bcbbdbf96f6e1a4e6bba44a6e3c27",
+        "archive": "rar"
+      },
+      {
+        "url": "https://drive.usercontent.google.com/download?id=1MuJD3lMD-WJvMQZ70LHVJx50RlWu4CPD&export=download&confirm=t",
+        "filename": "AES_PTv2_STM32F4_D3.h5",
+        "known_hash": "sha256:50b44267a33f0cb536df4fd4cd47e02abb10c7d40f70cb466f4bad01224c5ccb",
+        "archive": "rar"
+      },
+      {
+        "url": "https://drive.usercontent.google.com/download?id=1e6YQGhTb7cYYeeUskMLiT75GAQW2mT0r&export=download&confirm=t",
+        "filename": "AES_PTv2_STM32F4_D4.h5",
+        "known_hash": "sha256:8a8ac5af91b8762329bb2f1d004fca5a6eb3f0df25777eb9c38db127be85b01b",
+        "archive": "rar"
+      }
+    ],
+    "homepage": "https://github.com/urioja/AESPTv2",
+    "paper": "https://github.com/urioja/AESPTv2",
+    "license": "not stated",
+    "license_source": "https://api.github.com/repos/urioja/AESPTv2/license",
+    "size_bytes": 15174686597,
+    "disk_bytes": 31616353733,
+    "notes": "AES-PTv2 STM32F4 (device D1), masking scheme MS1 (same device .h5 files as the unprotected set).",
+    "fields": {"profiling": ["keys", "labels", "masks", "plaintexts", "traces"], "attack": ["keys", "labels", "masks", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "electromagnetic",
+      "platform": "arm-cortex-m",
+      "device": "STM32F4 (D1-D4)",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 1500,
+      "year": 2021
+    },
+    "adapter": "hdf5",
+    "adapter_config": {
+      "splits": {
+        "profiling": "MS1/Profiling",
+        "attack": "MS1/Attack"
+      },
+      "default_split": "profiling",
+      "traces_dataset": "Traces",
+      "field_aliases": {
+        "plaintexts": ["plaintext"],
+        "keys": ["key"],
+        "masks": ["masks"]
+      },
+      "metadata_dataset": "MetaData",
+      "labels_dataset": "Labels",
+      "algorithm": "AES-128",
+      "preferred_filename": "AES_PTv2_D1.h5"
+    }
+  },
+  "aes-ptv2-stm32f4-ms2": {
+    "display_name": "AES PTv2 STM32F4 (masked MS2)",
+    "aliases": [
+      "ptv2-stm32-ms2"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://drive.usercontent.google.com/download?id=1xDY3-xJ2GodaY2-qgsKm1_LrH7GxkIcr&export=download&confirm=t",
+        "filename": "AES_PTv2_STM32F4_D1.h5",
+        "known_hash": "sha256:dea8b41bc2e74fc97d6008ec4469b4ee35bfbb15b225a72cad091755d12538fb",
+        "archive": "rar"
+      },
+      {
+        "url": "https://drive.usercontent.google.com/download?id=1FLNX9h957BgaR0Op1-ZR8X7xweTxqACm&export=download&confirm=t",
+        "filename": "AES_PTv2_STM32F4_D2.h5",
+        "known_hash": "sha256:43599c88ca6a12eec7690740eb8b707b417bcbbdbf96f6e1a4e6bba44a6e3c27",
+        "archive": "rar"
+      },
+      {
+        "url": "https://drive.usercontent.google.com/download?id=1MuJD3lMD-WJvMQZ70LHVJx50RlWu4CPD&export=download&confirm=t",
+        "filename": "AES_PTv2_STM32F4_D3.h5",
+        "known_hash": "sha256:50b44267a33f0cb536df4fd4cd47e02abb10c7d40f70cb466f4bad01224c5ccb",
+        "archive": "rar"
+      },
+      {
+        "url": "https://drive.usercontent.google.com/download?id=1e6YQGhTb7cYYeeUskMLiT75GAQW2mT0r&export=download&confirm=t",
+        "filename": "AES_PTv2_STM32F4_D4.h5",
+        "known_hash": "sha256:8a8ac5af91b8762329bb2f1d004fca5a6eb3f0df25777eb9c38db127be85b01b",
+        "archive": "rar"
+      }
+    ],
+    "homepage": "https://github.com/urioja/AESPTv2",
+    "paper": "https://github.com/urioja/AESPTv2",
+    "license": "not stated",
+    "license_source": "https://api.github.com/repos/urioja/AESPTv2/license",
+    "size_bytes": 15174686597,
+    "disk_bytes": 31616353733,
+    "notes": "AES-PTv2 STM32F4 (device D1), masking scheme MS2 (same device .h5 files as the unprotected set).",
+    "fields": {"profiling": ["keys", "labels", "masks", "plaintexts", "traces"], "attack": ["keys", "labels", "masks", "plaintexts", "traces"]},
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "electromagnetic",
+      "platform": "arm-cortex-m",
+      "device": "STM32F4 (D1-D4)",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 1780,
+      "year": 2021
+    },
+    "adapter": "hdf5",
+    "adapter_config": {
+      "splits": {
+        "profiling": "MS2/Profiling",
+        "attack": "MS2/Attack"
+      },
+      "default_split": "profiling",
+      "traces_dataset": "Traces",
+      "field_aliases": {
+        "plaintexts": ["plaintext"],
+        "keys": ["key"],
+        "masks": ["masks"]
+      },
+      "metadata_dataset": "MetaData",
+      "labels_dataset": "Labels",
+      "algorithm": "AES-128",
+      "preferred_filename": "AES_PTv2_D1.h5"
+    }
+  },
+  "ecc-cswap-arith": {
+    "display_name": "Curve25519 CSWAP-arithmetic",
+    "aliases": [
+      "curve25519-cswap-arith",
+      "cswap-arith"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://www.dropbox.com/scl/fi/cpoaco0zwmgzdarj2427p/ecc_datasets.zip?rlkey=d71qkr0fdlkmtwmxohwezsxln&dl=1",
+        "filename": "ecc_datasets.zip",
+        "known_hash": "sha256:f0c78012df7e77cf365c9541593b77332ac6ab141c26ec17a794f4b044215bf0",
+        "archive": "zip"
+      }
+    ],
+    "homepage": "https://eprint.iacr.org/2017/1204.pdf",
+    "paper": "https://eprint.iacr.org/2017/1204.pdf",
+    "license": "not stated",
+    "license_source": "https://github.com/AISyLab/IterativeDLFramework",
+    "size_bytes": 692429014,
+    "disk_bytes": 3446743206,
+    "notes": "Curve25519 CSWAP-arithmetic variant; ships in the same ecc_datasets.zip as the registered CSWAP-pointer entry (loads cswap_arith.h5).",
+    "fields": {"profiling": ["labels", "traces"], "attack": ["labels", "traces"]},
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "Curve25519",
+      "measurement": "electromagnetic",
+      "platform": "arm-cortex-m",
+      "device": "32-bit ARM Cortex-M4F",
+      "countermeasures": [
+        "constant-time",
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 8000,
+      "year": 2017
+    },
+    "adapter": "flat-hdf5",
+    "adapter_config": {
+      "splits": {
+        "profiling": "profiling_traces",
+        "attack": "attacking_traces"
+      },
+      "default_split": "profiling",
+      "labels": {
+        "profiling": "profiling_data",
+        "attack": "attacking_data"
+      },
+      "preferred_filename": "cswap_arith.h5",
+      "algorithm": "Curve25519"
+    }
+  },
+  "ascon-cw-protected": {
+    "display_name": "Ascon ChipWhisperer protected (DOM)",
+    "aliases": [
+      "ascon-protected",
+      "ascon-software-protected"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://zenodo.org/api/records/10229484/files/ascon_cw_protected.h5/content",
+        "filename": "ascon_cw_protected.h5",
+        "known_hash": "md5:201cc0f7d2276838a12a4ab59634f818",
+        "archive": null
+      }
+    ],
+    "homepage": "https://zenodo.org/records/10229484",
+    "paper": "https://eprint.iacr.org/2023/1598",
+    "license": "CC-BY-4.0",
+    "license_source": "https://zenodo.org/api/records/10229484",
+    "size_bytes": 3472006528,
+    "disk_bytes": 3472006528,
+    "notes": "First-order Domain-Oriented-Masking protected Ascon on a ChipWhisperer STM32F4 (same Zenodo record as the unprotected set).",
+    "fields": ["ciphertexts", "keys", "labels", "plaintexts", "traces"],
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "Ascon-128",
+      "measurement": "power",
+      "platform": "arm-cortex-m",
+      "device": "STM32F4 (ChipWhisperer)",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "variable",
+      "n_samples": 1408,
+      "year": 2023
+    },
+    "adapter": "ascon-hdf5"
+  },
+  "ascon-cw-unprotected-raw": {
+    "display_name": "Ascon ChipWhisperer unprotected (raw .trs)",
+    "aliases": [
+      "ascon-unprotected-raw",
+      "ascon-cw-raw"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://zenodo.org/api/records/10229484/files/ascon_cw_unprotected.trs/content",
+        "filename": "ascon_cw_unprotected.trs",
+        "known_hash": "md5:ba62b8c65c74595a85c5bba8af5b7470",
+        "archive": null
+      }
+    ],
+    "homepage": "https://zenodo.org/records/10229484",
+    "paper": "https://eprint.iacr.org/2023/1598",
+    "license": "CC-BY-4.0",
+    "license_source": "https://zenodo.org/api/records/10229484",
+    "size_bytes": 371800383,
+    "disk_bytes": 371800383,
+    "notes": "Raw (Riscure .trs) unprotected Ascon acquisition (same Zenodo record). Loaded traces-only; the per-trace crypto-data byte layout is not yet mapped.",
+    "fields": ["traces"],
+    "metadata": {
+      "format": "trs",
+      "algorithm": "Ascon-128",
+      "measurement": "power",
+      "platform": "arm-cortex-m",
+      "device": "STM32F4 (ChipWhisperer)",
+      "countermeasures": [
+        "none"
+      ],
+      "key": "variable",
+      "n_samples": 772,
+      "year": 2023
+    },
+    "adapter": "trs",
+    "adapter_config": {
+      "algorithm": "Ascon-128"
+    }
+  },
+  "ascad-raw-fixed": {
+    "display_name": "ASCAD ATMega fixed key (raw traces)",
+    "aliases": [
+      "ascad-raw",
+      "ascadf-raw",
+      "atmega8515-raw-fixed"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://www.data.gouv.fr/api/1/datasets/r/e7ab6f9e-79bf-431f-a5ed-faf0ebe9b08e",
+        "filename": "ASCAD_data.zip",
+        "known_hash": "sha256:a6884faf97133f9397aeb1af247dc71ab7616f3c181190f127ea4c474a0ad72c",
+        "archive": "zip"
+      }
+    ],
+    "homepage": "https://github.com/ANSSI-FR/ASCAD/tree/master/ATMEGA_AES_v1/ATM_AES_v1_fixed_key",
+    "paper": "https://eprint.iacr.org/2018/053",
+    "license": "Licence Ouverte 1.0 (code repository: BSD)",
+    "license_source": "https://www.data.gouv.fr/api/1/datasets/5aaa829dc751df2fbd43eacb/",
+    "notes": "ASCAD fixed-key RAW acquisition: ATMega8515_raw_traces.h5 (5.6 GB, 60,000 traces x 100,000 samples), shipped inside the same ASCAD_data.zip as the extracted ascadf set. Root-level 'traces' + compound 'metadata' (plaintext/key/masks).",
+    "size_bytes": 4435199469,
+    "disk_bytes": 12187112885,
+    "fields": ["keys", "masks", "plaintexts", "traces"],
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "platform": "avr",
+      "device": "ATMega8515",
+      "countermeasures": [
+        "masking"
+      ],
+      "key": "fixed",
+      "n_samples": 100000,
+      "year": 2018
+    },
+    "adapter": "hdf5",
+    "adapter_config": {
+      "splits": {
+        "all": "/"
+      },
+      "default_split": "all",
+      "traces_dataset": "traces",
+      "field_aliases": {
+        "plaintexts": [
+          "plaintext"
+        ],
+        "keys": [
+          "key"
+        ],
+        "masks": [
+          "masks"
+        ]
+      },
+      "preferred_filename": "ATMega8515_raw_traces.h5",
+      "algorithm": "AES"
+    }
+  },
+  "ascadv2r": {
+    "display_name": "ASCADv2 STM32 (raw traces)",
+    "aliases": [
+      "ascad-v2-raw",
+      "ascadv2-raw"
+    ],
+    "availability": "automatic",
+    "files": [
+      {
+        "url": "https://object.files.data.gouv.fr/anssi/ascadv2/ascadv2-stm32-conso-raw-traces1.h5",
+        "filename": "ascadv2-stm32-conso-raw-traces1.h5",
+        "known_hash": "sha1:4352910b4f4dea2de872f2122bb530582a238e02",
+        "archive": null
+      },
+      {
+        "url": "https://object.files.data.gouv.fr/anssi/ascadv2/ascadv2-stm32-conso-raw-traces2.h5",
+        "filename": "ascadv2-stm32-conso-raw-traces2.h5",
+        "known_hash": "sha1:b32a239bbdb3d683833d625a109f17a55d36f24a",
+        "archive": null
+      },
+      {
+        "url": "https://object.files.data.gouv.fr/anssi/ascadv2/ascadv2-stm32-conso-raw-traces3.h5",
+        "filename": "ascadv2-stm32-conso-raw-traces3.h5",
+        "known_hash": "sha1:10c4cdc37578f8ef6bd59608345548ffd6ba3771",
+        "archive": null
+      },
+      {
+        "url": "https://object.files.data.gouv.fr/anssi/ascadv2/ascadv2-stm32-conso-raw-traces4.h5",
+        "filename": "ascadv2-stm32-conso-raw-traces4.h5",
+        "known_hash": "sha1:f0aacc9587e94532f86a26355db81e5b4ab2848b",
+        "archive": null
+      },
+      {
+        "url": "https://object.files.data.gouv.fr/anssi/ascadv2/ascadv2-stm32-conso-raw-traces5.h5",
+        "filename": "ascadv2-stm32-conso-raw-traces5.h5",
+        "known_hash": "sha1:4158149ac9a0bd7a8dda758ddb45927e7015b831",
+        "archive": null
+      },
+      {
+        "url": "https://object.files.data.gouv.fr/anssi/ascadv2/ascadv2-stm32-conso-raw-traces6.h5",
+        "filename": "ascadv2-stm32-conso-raw-traces6.h5",
+        "known_hash": "sha1:5fd51946c8552514f4c56e8730a0f7cb9ca1ac5e",
+        "archive": null
+      },
+      {
+        "url": "https://object.files.data.gouv.fr/anssi/ascadv2/ascadv2-stm32-conso-raw-traces7.h5",
+        "filename": "ascadv2-stm32-conso-raw-traces7.h5",
+        "known_hash": "sha1:ab5e6fc117b11aae733ce61c6424f7d55a487039",
+        "archive": null
+      },
+      {
+        "url": "https://object.files.data.gouv.fr/anssi/ascadv2/ascadv2-stm32-conso-raw-traces8.h5",
+        "filename": "ascadv2-stm32-conso-raw-traces8.h5",
+        "known_hash": "sha1:ef72fb2a388099ef41fbdbb0ccaefc287f048290",
+        "archive": null
+      }
+    ],
+    "homepage": "https://github.com/ANSSI-FR/ASCAD/tree/master/STM32_AES_v2",
+    "paper": "https://eprint.iacr.org/2021/592",
+    "license": "Licence Ouverte 1.0 (code repository: BSD)",
+    "license_source": "https://www.data.gouv.fr/api/1/datasets/5f86e69087bfce2a36bef1c4/",
+    "notes": "ASCADv2 RAW acquisition (STM32F303, shuffling + affine masking): eight ascadv2-stm32-conso-raw-traces{1..8}.h5 files, 100,000 encryptions each (~100 GB per file, ~800 GB total). Auto-downloaded and verified against the authoritative ANSSI sha1 (object.files.data.gouv.fr/anssi/ascadv2/sha1.txt); mind the size (~100 GB per file, ~800 GB total); download only some files with files=, e.g. files='*traces1.h5'. WARNING: per the ANSSI notice, the last trace of each raw file (and its metadata) is zeroed by an acquisition issue - drop it before use to avoid bias. Adapter config (root-level 'traces' + 'metadata' compound with plaintext/key/masks columns) verified against ANSSI's ASCAD_generate.py.",
+    "size_bytes": 800068816384,
+    "fields": ["keys", "masks", "plaintexts", "traces"],
+    "metadata": {
+      "format": "hdf5",
+      "algorithm": "AES-128",
+      "measurement": "power",
+      "platform": "arm-cortex-m",
+      "device": "STM32 Cortex-M4",
+      "countermeasures": [
+        "affine-masking",
+        "shuffling"
+      ],
+      "key": "variable",
+      "n_samples": 1000000,
+      "year": 2021
+    },
+    "adapter": "hdf5",
+    "adapter_config": {
+      "chunked": true,
+      "chunk_glob": "ascadv2-stm32-conso-raw-traces*.h5",
+      "splits": {
+        "all": "/"
+      },
+      "default_split": "all",
+      "traces_dataset": "traces",
+      "field_aliases": {
+        "plaintexts": [
+          "plaintext"
+        ],
+        "keys": [
+          "key"
+        ],
+        "masks": [
+          "masks"
+        ]
+      },
+      "algorithm": "AES"
+    }
+  }
+}

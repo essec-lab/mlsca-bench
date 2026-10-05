@@ -1,0 +1,85 @@
+# Copyright (c) 2026 Universität der Bundeswehr München / FI CODE - ESSEC Lab.
+# Licensed under the Apache License, Version 2.0, see LICENSE for details.
+# SPDX-License-Identifier: Apache-2.0
+
+name: Release
+
+# Publishes to PyPI with trusted publishing (no API token stored in GitHub).
+#
+# One-time setup, done by a maintainer:
+#   1. On https://pypi.org and https://test.pypi.org, add a "pending publisher"
+#      for project `mlsca-bench`: owner `essec-lab`, repository `mlsca-bench`,
+#      workflow `release.yml`, environments `pypi` and `testpypi`.
+#   2. In GitHub (Settings > Environments), create the environments `pypi` and
+#      `testpypi`. Requiring a reviewer on `pypi` is recommended.
+#
+# Usage:
+#   - Test run: Actions > Release > Run workflow  -> uploads to TestPyPI.
+#   - Real release: publish a GitHub release (tag vX.Y.Z)  -> uploads to PyPI.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Make the README links absolute for the PyPI page
+        # The README links to the repository's own files with relative links (they
+        # work on GitHub and GitLab); on PyPI they only work as full addresses.
+        run: |
+          python - <<'EOF'
+          import pathlib, re
+          readme = pathlib.Path("README.md")
+          base = "https://github.com/essec-lab/mlsca-bench/blob/main/"
+          readme.write_text(re.sub(r"\]\((?!https?://|#)([^)]+)\)", lambda m: f"]({base}{m.group(1)})",
+                                   readme.read_text(encoding="utf-8")), encoding="utf-8")
+          EOF
+      - name: Build sdist and wheel
+        run: |
+          python -m pip install build twine
+          python -m build
+          python -m twine check dist/*
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  testpypi:
+    if: github.event_name == 'workflow_dispatch'
+    needs: build
+    runs-on: ubuntu-latest
+    environment: testpypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+
+  pypi:
+    if: github.event_name == 'release'
+    needs: build
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1

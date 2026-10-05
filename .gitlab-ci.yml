@@ -1,0 +1,13 @@
+# Copyright (c) 2026 Universität der Bundeswehr München / FI CODE - ESSEC Lab.
+# Licensed under the Apache License, Version 2.0, see LICENSE for details.
+# SPDX-License-Identifier: Apache-2.0
+
+# Only a scheduled job: nothing runs on push. To enable the weekly dataset link
+# check, create a schedule in GitLab (Build > Pipeline schedules, e.g. weekly).
+dataset-links:
+  image: python:3.12
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+  script:
+    - python -m pip install -e ".[huggingface]"
+    - python scripts/check_links.py
